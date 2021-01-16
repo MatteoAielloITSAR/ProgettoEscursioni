@@ -14,14 +14,15 @@
     />
     </head>
     <body>
-        <div class="container-fluid">
-            <header class="row">
+        <div  id:reg-utente class="container-fluid">
+            
                 <div id="titolo" class="col-6 text-left">
                     <h1>Registrazione Utente</h1>
                 </div>
-            </header>
 
-            <div id="campi">
+            
+            
+            <div id="campi" class="col-1">
                 Nome: <input type="text" id="nome"><br>
                <br> 
                Cognome: <input type="text" id="cognome"><br>
@@ -31,18 +32,25 @@
                Password: <input type="text" id="password"><br>
                 <br>
             
+                
+                
+                
+               <button id="invio" type="button" class="btn btn-primary" onclick="funzione()">Invio</button>
                
-               <button type="button" id="invio" onclick="console.log('invio premuto')
-               class="btn btn-primary">Invio</button>
-               <button type="button" class="btn btn-primary" id="invio" onclick="console.log('invio premuto')>Primary</button>
-          </div>
+            
+               
+              
+            </div>
+
+                
+        
 
         </div>
-        
+        <script src="registrazione-utente.js"></script>
         <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous">
+        crossorigin="anonymous"> 
         </script>
     
         <script 
