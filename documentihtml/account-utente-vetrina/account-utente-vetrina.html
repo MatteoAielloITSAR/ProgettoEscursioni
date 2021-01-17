@@ -10,6 +10,8 @@
         <link
                 rel="stylesheet"
                 href="fontawesome-free-5.15.1-web/css/all.css">
+        <link rel="stylesheet" href="account-utente-vetrina.css">
+       
 
     </head>
     <body>
@@ -22,21 +24,22 @@
         <br>
        
         <div id="posts">
-            <div id="post1">
+            <div id="post1" onclick="post1()">
                 <div id="nome-percorso">"nome percorso"</div>
                 <div id="descrizione">"descrizione"</div>
-                <div id="standard-personalizzato">"standard/personalizzato"</div>
+                <div id="standard-personalizzato">"standardPersonalizzato" </div>
             </div><br>
-            <div id="postN">
+            <div id="postN" onclick="postN()">
                <div id="nome-percorso">"nome percorso"</div>
                 <div id="descrizione">"descrizione"</div>
-                <div id="standard-personalizzato">"standardPersonalizzato"</div>
+                <div id="standard-personalizzato">"standardPersonalizzato" </div>
+                
             </div><br>
-        <button id="iscriviti" type="button" class="btn btn-primary">Iscriviti</button>
+        <button id="iscriviti" type="button" class="btn btn-primary"onclick="iscriviti()">Iscriviti</button>
         </div>
             
             
-           
+            <script src="account-utente-vetrina.js"></script>
             <script
             src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
