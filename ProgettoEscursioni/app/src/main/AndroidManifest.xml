@@ -9,12 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProgettoEscursioni">
-<<<<<<< HEAD
         <activity android:name=".RegistrazioneUtenteActivity"></activity>
-=======
         <activity android:name=".AccountActivity"></activity>
         <activity android:name=".PuntoPercorsoActivity" />
->>>>>>> b97d58077252be347082395a88028361644db4a6
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
