@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Post iscrizioni</title>
+        <link 
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="../fontawesome-free-5.15.1-web/css/all.css">
+    </head>
+    <body>
+        <h1>Gli ultimi post delle tue iscrizioni</h1>
+        <div id="posts" class="container-fluid">
+            <div id="post1" class="alert alert-primary row" role="alert" onclick="toPost();">
+                <div id="username"                  class="col-3">"nome percorso"</div>
+                <div id="nome-percorso"             class="col-3">"username"</div>
+                <div id="descrizione"               class="col-3">"descrizione"</div>
+                <div id="standard-personalizzato"   class="col-3">"standard/personalizzato"</div>
+            </div>
+            <div id="postN" class="alert alert-primary row" role="alert" onclick="toPost();">
+                <div id="username"                  class="col-3">"nome percorso"</div>
+                <div id="nome-percorso"             class="col-3">"username"</div>
+                <div id="descrizione"               class="col-3">"descrizione"</div>
+                <div id="standard-personalizzato"   class="col-3">"standard/personalizzato"</div>
+            </div>
+        </div>
+        <button id="iscrizioni" type="button" class="btn btn-primary" onclick="toIscrizioni();">iscrizioni</button>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous">
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous">
+        </script>
+        <script 
+            src="post-iscrizioni.js">
+        </script>
+    </body>
+</html>
