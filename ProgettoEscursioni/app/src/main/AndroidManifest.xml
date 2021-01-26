@@ -9,14 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProgettoEscursioni">
-<<<<<<< HEAD
-        <activity android:name=".PostActivity"></activity>
+        <activity android:name=".SceltaPercorso"></activity>
+        <activity android:name=".AccountVetrina" />
+        <activity android:name=".PostActivity" />
         <activity android:name=".SearchPostActivity" />
-=======
-        <activity android:name=".RegistrazioneUtenteActivity"></activity>
-        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".RegistrazioneUtenteActivity" />
+        <activity android:name=".AccountActivity" />
         <activity android:name=".PuntoPercorsoActivity" />
->>>>>>> 40689059e76d3ce92c6239a5fcfdecdf9f9de18f
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConfermaActivity"/>
-        <activity android:name=".NuovologinActivity"/>
-        <activity android:name=".RecuperopasswordActivity"/>
+        <activity android:name=".ConfermaActivity" />
+        <activity android:name=".NuovologinActivity" />
+        <activity android:name=".RecuperopasswordActivity" />
     </application>
 
 </manifest>
