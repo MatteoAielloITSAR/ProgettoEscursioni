@@ -19,9 +19,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            >
+            android:layout_height="wrap_content">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -62,36 +60,54 @@
                 android:scaleType="fitXY"
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="140dp"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
+                android:layout_width="wrap_content"
+                android:layout_height="169dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="100dp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="19dp"
                     tools:srcCompat="@tools:sample/avatars" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:text="Username: __________" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="100dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:text="Sesso: maschile" />
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Username: __________" />
+
+                    <TextView
+                        android:id="@+id/sesso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:text="Sesso: maschile" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:text="Email: nome.cognome@email.com" />
+                </LinearLayout>
+
+
             </LinearLayout>
-
-
-
-
         </FrameLayout>
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
