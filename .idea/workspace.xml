@@ -24,7 +24,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d4eb48-8d6f-49df-9648-9ba66c0962ae" name="Default Changelist" comment="" />
+    <list default="true" id="50d4eb48-8d6f-49df-9648-9ba66c0962ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ProgettoEscursioni/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProgettoEscursioni/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connessione-db/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/connessione-db/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connessione-db/src/main/java/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/connessione-db/src/main/java/main/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connessione-db/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/connessione-db/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connessione-db/target/classes/META-INF/maven/it.itsrizzoli.ifts.progettoescursioni/connessione-db/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/connessione-db/target/classes/META-INF/maven/it.itsrizzoli.ifts.progettoescursioni/connessione-db/pom.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +53,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ProgettoEscursioni" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -137,11 +144,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="803" y="209" key="FileChooserDialogImpl" timestamp="1611004235898">
+    <state x="803" y="209" key="FileChooserDialogImpl" timestamp="1611420507690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="803" y="209" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611004235898" />
+    <state x="803" y="209" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611420507690" />
   </component>
 </project>
