@@ -1,56 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreazionePostActivity">
-
-    <TextView
-        android:id="@+id/tvNomePercorso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="Nome Percorso:"
-        android:textSize="20dp"
-        android:layout_marginTop="25dp" />
-
-    <EditText
-        android:id="@+id/etNomePercoso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/tvNomePercorso"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:id="@+id/tvDescrizione"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvNomePercorso"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="35dp"
-        android:text="Descizione:"
-        android:textSize="20dp"/>
-
-    <EditText
-        android:id="@+id/etDescrizione"
+    android:fillViewport="true">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvDescrizione"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvVisibilita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Visibilità Post"
-        android:layout_below="@+id/etDescrizione"
-        android:textSize="20dp"
-        android:layout_marginTop="35dp"/>
+        <TextView
+            android:id="@+id/tvNomePercorso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Nome Percorso:"
+            android:textSize="20dp"
+            android:layout_marginTop="25dp" />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvVisibilita"/>
-</RelativeLayout>
+        <EditText
+            android:id="@+id/etNomePercoso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tvNomePercorso"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvDescrizione"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNomePercorso"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="35dp"
+            android:text="Descizione:"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etDescrizione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDescrizione"/>
+
+        <TextView
+            android:id="@+id/tvVisibilita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visibilità Post"
+            android:layout_below="@+id/etDescrizione"
+            android:textSize="20dp"
+            android:layout_marginTop="35dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgVisibilita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvVisibilita"
+            android:layout_marginTop="10dp" >
+            <RadioButton
+                android:id="@+id/rbTutti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tutti" />
+            <RadioButton
+                android:id="@+id/rbSoloFollowers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solo followers" />
+            <RadioButton
+                android:id="@+id/rbIo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solo io" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/tvDifficolta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visibilità Post"
+            android:layout_below="@+id/rgVisibilita"
+            android:textSize="20dp" />
+
+        <RadioGroup
+            android:id="@+id/rgDifficolta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDifficolta"
+            android:layout_marginTop="10dp" >
+            <RadioButton
+                android:id="@+id/rbFacile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facile" />
+            <RadioButton
+                android:id="@+id/rbMedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medio" />
+            <RadioButton
+                android:id="@+id/rbDifficile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Difficile" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnAggiungiImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_below="@+id/rgDifficolta"/>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rgDifficolta"
+            android:layout_toEndOf="@+id/btnAggiungiImg"></HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btnCreaPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crea Post"
+            android:layout_below="@+id/btnAggiungiImg"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>
