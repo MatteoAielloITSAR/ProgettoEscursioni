@@ -71,22 +71,34 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginRight="19dp"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text= "Nome: Alessandro" />
+
+                    <TextView
+                        android:id="@+id/cognome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text= "Cognome: Lazzari" />
 
                     <TextView
                         android:id="@+id/username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Username: __________" />
+                        android:text="Username: @principezuko" />
 
                     <TextView
                         android:id="@+id/sesso"
@@ -102,12 +114,21 @@
                         android:layout_toEndOf="@+id/imageView2"
                         android:text="Email: nome.cognome@email.com" />
                 </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="280dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I TUOI PERCORSI:"
+                    android:textStyle="bold"/>
             </LinearLayout>
         </FrameLayout>
-
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
