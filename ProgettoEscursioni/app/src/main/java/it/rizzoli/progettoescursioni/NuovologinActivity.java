@@ -1,5 +1,6 @@
 package it.rizzoli.progettoescursioni;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,8 @@ public class NuovologinActivity extends AppCompatActivity {
         btnAccedi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent accountIntent=new Intent(NuovologinActivity.this,AccountActivity.class);
+                startActivity(accountIntent);
                 Toast.makeText(NuovologinActivity.this, "btnAccedi", Toast.LENGTH_SHORT).show();
             }
         });

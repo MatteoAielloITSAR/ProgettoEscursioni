@@ -140,7 +140,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+<<<<<<< HEAD
+                    <LinearLayout
+=======
                 <LinearLayout
+                    android:id="@+id/lyPost1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -176,28 +180,64 @@
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/nomePercorsoN"
+>>>>>>> 347179fc0288abf6be0c20dacf0eb3ecdd90da5e
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="nomePercorsoN"/>
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/descrizioneN"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="descrizioneN"/>
+                        <TextView
+                            android:id="@+id/nomePercorso1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="nomePercorso1"/>
 
-                    <TextView
-                        android:id="@+id/visibilitaN"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="visibilitaN"/>
+                        <TextView
+                            android:id="@+id/descrizione1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="descrizione1"/>
 
-                    <TextView
-                        android:id="@+id/standardPersonalizzatoN"
+                        <TextView
+                            android:id="@+id/visibilita1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="visibilita1"/>
+
+                        <TextView
+                            android:id="@+id/standardPersonalizzato1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="standardPersonalizzato1"/>
+
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="standardPersonalizzatoN"/>
-                </LinearLayout>
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/nomePercorsoN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="nomePercorsoN"/>
+
+                        <TextView
+                            android:id="@+id/descrizioneN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="descrizioneN"/>
+
+                        <TextView
+                            android:id="@+id/visibilitaN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="visibilitaN"/>
+
+                        <TextView
+                            android:id="@+id/standardPersonalizzatoN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="standardPersonalizzatoN"/>
+                    </LinearLayout>
                 </LinearLayout>
 
             </ScrollView>
