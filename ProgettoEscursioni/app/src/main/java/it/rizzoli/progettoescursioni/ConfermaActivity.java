@@ -24,9 +24,15 @@ public class ConfermaActivity extends AppCompatActivity {
         btnCodeconfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 Toast.makeText(ConfermaActivity.this, "btnCodeconfirm", Toast.LENGTH_LONG).show();
                 Intent confermatoIntent= new Intent(ConfermaActivity.this, AccountActivity.class);
                 startActivity(confermatoIntent);
+=======
+                Intent intent=new Intent(ConfermaActivity.this,NuovologinActivity.class);
+                startActivity(intent);
+                Toast.makeText(ConfermaActivity.this, "btnCodeconfirm", Toast.LENGTH_SHORT).show();
+>>>>>>> 7856e4f92ab178fe00966264fe13c0fe2f7fe6c9
             }
         });
     }
