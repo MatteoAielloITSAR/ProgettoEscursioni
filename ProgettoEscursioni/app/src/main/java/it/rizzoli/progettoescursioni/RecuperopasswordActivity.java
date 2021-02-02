@@ -2,6 +2,7 @@ package it.rizzoli.progettoescursioni;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,9 +23,13 @@ public class RecuperopasswordActivity extends AppCompatActivity {
 
         btnConferma.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Toast.makeText(RecuperopasswordActivity.this, "btnConferma", Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
+                Toast.makeText(RecuperopasswordActivity.this, "btnConferma", Toast.LENGTH_LONG).show();
+                Intent confermaIntent= new Intent(RecuperopasswordActivity.this, AccountActivity.class);
+                startActivity(confermaIntent);
+
             }
         });
     }
+    //public
 }

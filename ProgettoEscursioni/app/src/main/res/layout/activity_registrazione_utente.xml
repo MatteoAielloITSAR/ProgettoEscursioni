@@ -67,7 +67,7 @@
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/etRegistrati"
+            android:id="@+id/btnRegistrati"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="registrati" />
