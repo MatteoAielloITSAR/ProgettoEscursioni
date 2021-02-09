@@ -24,16 +24,7 @@ public class RecuperopasswordActivity extends AppCompatActivity {
         btnConferma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
-                Toast.makeText(RecuperopasswordActivity.this, "btnConferma", Toast.LENGTH_LONG).show();
-                Intent confermaIntent= new Intent(RecuperopasswordActivity.this, AccountActivity.class);
-                startActivity(confermaIntent);
 
-            }
-        });
-    }
-    //public
-=======
                 Toast.makeText(RecuperopasswordActivity.this, "btnConferma", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(RecuperopasswordActivity.this,ConfermaActivity.class);
                 startActivity(intent);
@@ -41,5 +32,4 @@ public class RecuperopasswordActivity extends AppCompatActivity {
         });
     }
 
->>>>>>> 7856e4f92ab178fe00966264fe13c0fe2f7fe6c9
 }
