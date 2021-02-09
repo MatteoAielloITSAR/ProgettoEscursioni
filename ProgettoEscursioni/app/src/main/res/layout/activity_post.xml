@@ -20,30 +20,15 @@
         android:text="Username" />
 
 
-  <Button
     <Button
         android:id="@+id/visualizzaMappaPercorso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_weight="1"
-        android:layout_gravity="left"
         android:text="Visualizza Mappa Percorso" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="169dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
-        android:orientation="horit">
-
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
         android:layout_width="100dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
@@ -81,8 +66,6 @@
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>
