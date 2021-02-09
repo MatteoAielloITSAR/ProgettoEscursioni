@@ -14,6 +14,7 @@ public class AccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
+        /*
         LinearLayout lyPost1=findViewById(R.id.lyPost1);
 
         lyPost1.setOnClickListener(new View.OnClickListener() {
@@ -24,6 +25,7 @@ public class AccountActivity extends AppCompatActivity {
             }
         });
 
+         */
 
     }
 }
