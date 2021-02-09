@@ -15,7 +15,7 @@ public class ConfermaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recuperopassword);
+        setContentView(R.layout.conferma);
 
         EditText etCode = findViewById(R.id.etCode);
         TextView twCode = findViewById(R.id.twCode);
