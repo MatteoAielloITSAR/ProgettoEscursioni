@@ -15,7 +15,7 @@ public class ConfermaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recuperopassword);
+        setContentView(R.layout.conferma);
 
         EditText etCode = findViewById(R.id.etCode);
         TextView twCode = findViewById(R.id.twCode);
@@ -24,10 +24,9 @@ public class ConfermaActivity extends AppCompatActivity {
         btnCodeconfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ConfermaActivity.this, "btnCodeconfirm", Toast.LENGTH_LONG).show();
-                Intent confermatoIntent= new Intent(ConfermaActivity.this, AccountActivity.class);
-                startActivity(confermatoIntent);
-
+                Intent intent=new Intent(ConfermaActivity.this,NuovologinActivity.class);
+                startActivity(intent);
+                Toast.makeText(ConfermaActivity.this, "btnCodeconfirm", Toast.LENGTH_SHORT).show();
             }
         });
     }
