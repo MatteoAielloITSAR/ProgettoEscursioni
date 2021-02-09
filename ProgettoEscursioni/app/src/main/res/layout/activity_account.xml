@@ -140,9 +140,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-<<<<<<< HEAD
+
                     <LinearLayout
-=======
+
                 <LinearLayout
                     android:id="@+id/lyPost1"
                     android:layout_width="match_parent"
@@ -180,7 +180,6 @@
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/nomePercorsoN"
->>>>>>> 347179fc0288abf6be0c20dacf0eb3ecdd90da5e
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
