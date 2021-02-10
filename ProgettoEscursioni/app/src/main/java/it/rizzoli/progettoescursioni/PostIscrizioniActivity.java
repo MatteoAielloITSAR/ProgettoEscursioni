@@ -18,8 +18,8 @@ public class PostIscrizioniActivity extends AppCompatActivity {
         btnIscrizioni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(PostIscrizioniActivity.this, IscrizioniActivity.class);
-                startActivity(browserIntent);
+                Intent intent = new Intent(PostIscrizioniActivity.this, IscrizioniActivity.class);
+                startActivity(intent);
             }
         });
     }
