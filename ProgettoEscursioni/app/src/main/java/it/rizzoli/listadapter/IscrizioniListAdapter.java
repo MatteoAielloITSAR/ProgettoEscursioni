@@ -1,4 +1,4 @@
-package it.rizzoli.progettoescursioni;
+package it.rizzoli.listadapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,7 +12,8 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-import it.rizzoli.database.Utente;
+import it.rizzoli.model.Utente;
+import it.rizzoli.progettoescursioni.R;
 
 public class IscrizioniListAdapter extends ArrayAdapter<Utente> {
     Context ctx;
@@ -37,7 +38,7 @@ public class IscrizioniListAdapter extends ArrayAdapter<Utente> {
         Utente u = getItem(position);
 
 
-        usernameTextView.setText(u.getNome());
+        usernameTextView.setText(u.getUsername());
 
 
         return rowView;
