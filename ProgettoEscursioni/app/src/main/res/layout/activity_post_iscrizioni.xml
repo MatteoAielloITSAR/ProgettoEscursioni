@@ -40,4 +40,9 @@
 
     </ScrollView>
 
+    <ListView
+        android:id="@+id/percorsiListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </LinearLayout>

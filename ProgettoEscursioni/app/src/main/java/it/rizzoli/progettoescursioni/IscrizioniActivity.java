@@ -2,6 +2,7 @@ package it.rizzoli.progettoescursioni;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import it.rizzoli.adapter.IscrizioniListAdapter;
 import it.rizzoli.database.Utente;
 
 public class IscrizioniActivity extends AppCompatActivity {
@@ -31,8 +33,13 @@ public class IscrizioniActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Utente ut = iscrizioniListAdapter.getItem(i);
-                String user = ut.getUsername() ;
+                String user = ut.getUsername();
                 Toast.makeText(IscrizioniActivity.this, user, Toast.LENGTH_LONG).show();
+
+                Intent accountVetrinaIntent = new Intent(IscrizioniActivity.this, AccountVetrina.class);
+                accountVetrinaIntent.putExtra("UTENTE", ut.getId());
+
+                startActivity(accountVetrinaIntent);
             }
         });
   
