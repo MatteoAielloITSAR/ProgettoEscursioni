@@ -39,7 +39,7 @@ public class IscrizioniActivity extends AppCompatActivity {
                 Intent accountVetrinaIntent = new Intent(IscrizioniActivity.this, AccountVetrina.class);
                 accountVetrinaIntent.putExtra("UTENTE", ut.getId());
 
-                startActivity(accountVetrinaIntent);
+                startActivity(accountVetrinaIntent );
             }
         });
   
