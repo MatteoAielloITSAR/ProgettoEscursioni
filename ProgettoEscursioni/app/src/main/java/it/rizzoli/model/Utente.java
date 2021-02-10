@@ -1,4 +1,4 @@
-package it.rizzoli.database;
+package it.rizzoli.model;
 
 public class Utente {
     private int id;

@@ -1,4 +1,4 @@
-package it.rizzoli.adapter;
+package it.rizzoli.dbadapter;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,8 +6,8 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
-import it.rizzoli.database.DatabaseHelper;
-import it.rizzoli.database.Utente;
+import it.rizzoli.database.UtenteDatabaseHelper;
+import it.rizzoli.model.Utente;
 
 public class UtenteDbAdapter {
     public static final String USERS_TABLE_KEY = "Users"; //Utente
@@ -21,7 +21,7 @@ public class UtenteDbAdapter {
 
     private Context ctx;
     private SQLiteDatabase database;
-    private DatabaseHelper dbHelper;
+    private UtenteDatabaseHelper dbHelper;
 
     public UtenteDbAdapter(Context context) {
         ctx = context;
@@ -41,7 +41,7 @@ public class UtenteDbAdapter {
     //apriamo la connessione al db per l'Utente
     //metodo da chiamare subito dopo un Dbadapter
     public UtenteDbAdapter open() throws SQLException {
-        dbHelper = new DatabaseHelper(ctx);
+        dbHelper = new UtenteDatabaseHelper(ctx);
         database = dbHelper.getWritableDatabase();
         return this;
     }

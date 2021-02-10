@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import it.rizzoli.dbadapter.UtenteDbAdapter;
 
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class UtenteDatabaseHelper extends SQLiteOpenHelper {
     Context ctx = null; //l'activity dove il db opererà
     SQLiteDatabase db;
 
@@ -24,7 +24,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             UtenteDbAdapter.UTENTE_AGE_KEY + " int);";
     //String creaUtente = "create table utente(_id integer primary key, nome, cognnome, username, password, eta)"
 
-    public DatabaseHelper(Context context) {
+    public UtenteDatabaseHelper(Context context) {
         super(context, DATABASE_NAME_KEY, null, DATABASE_VER_KEY);
         ctx = context;
     }

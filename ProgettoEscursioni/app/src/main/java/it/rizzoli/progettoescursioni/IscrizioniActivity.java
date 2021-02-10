@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import it.rizzoli.adapter.IscrizioniListAdapter;
-import it.rizzoli.database.Utente;
+import it.rizzoli.listadapter.IscrizioniListAdapter;
+import it.rizzoli.model.Utente;
 
 public class IscrizioniActivity extends AppCompatActivity {
 
