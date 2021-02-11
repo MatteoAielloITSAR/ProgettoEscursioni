@@ -12,7 +12,11 @@
         <activity android:name=".SceltaPercorso"></activity>
         <activity android:name=".AccountVetrina" />
         <activity android:name=".IscrizioniActivity"></activity>
-        <activity android:name=".PostIscrizioniActivity" />
+        <activity android:name=".PostIscrizioniActivity" ><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
         <activity android:name=".CreazionePostActivity" />
         <activity android:name=".PostActivity" />
         <activity android:name=".SearchPostActivity" />
@@ -20,11 +24,7 @@
         <activity android:name=".AccountActivity" />
         <activity android:name=".PuntoPercorsoActivity" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ConfermaActivity" />
         <activity android:name=".NuovologinActivity" />

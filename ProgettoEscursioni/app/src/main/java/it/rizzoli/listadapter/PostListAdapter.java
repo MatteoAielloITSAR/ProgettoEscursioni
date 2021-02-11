@@ -43,8 +43,9 @@ public class PostListAdapter extends ArrayAdapter<Post> {
 
         //usernameTextView.setText(p);
         nomePercorsoTextView.setText(p.getNomePercorso());
-        usernameTextView.setText(p.getDescrizione());
-        usernameTextView.setText(p.getTipologia());
+        descrizioneTextView.setText(p.getDescrizione());
+        usernameTextView.setText("Username");
+        tipologiaTextView.setText(p.getTipologia());
 
 
         return rowView;

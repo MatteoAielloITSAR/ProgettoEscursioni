@@ -6,6 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+import it.rizzoli.listadapter.IscrizioniListAdapter;
+import it.rizzoli.listadapter.PostListAdapter;
+import it.rizzoli.model.Post;
+import it.rizzoli.model.Utente;
 
 public class PostIscrizioniActivity extends AppCompatActivity {
 
@@ -22,5 +30,15 @@ public class PostIscrizioniActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ArrayList<Post> list=new ArrayList<>();
+        list.add(new Post("pippo","des1","tipo1"));
+        list.add(new Post("pluto","des2","tipo2"));
+
+        PostListAdapter postListAdapter=new PostListAdapter(this,R.layout.list_post,list);
+        ListView postListView = findViewById(R.id.percorsiListView);
+        postListView.setAdapter(postListAdapter);
+
+
     }
 }
