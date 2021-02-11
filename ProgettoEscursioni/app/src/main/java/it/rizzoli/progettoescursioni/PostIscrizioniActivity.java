@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -38,6 +40,20 @@ public class PostIscrizioniActivity extends AppCompatActivity {
         PostListAdapter postListAdapter=new PostListAdapter(this,R.layout.list_post,list);
         ListView postListView = findViewById(R.id.percorsiListView);
         postListView.setAdapter(postListAdapter);
+
+        postListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Post p= postListAdapter.getItem(position);
+                String nome=p.getNomePercorso();
+                Toast.makeText(PostIscrizioniActivity.this,nome,Toast.LENGTH_LONG).show();
+
+                Intent postIntent = new Intent(PostIscrizioniActivity.this, PostActivity.class);
+                postIntent.putExtra("POST", p.getId_Post());
+                startActivity(postIntent);
+
+            }
+        });
 
 
     }
