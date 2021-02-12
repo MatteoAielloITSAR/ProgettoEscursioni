@@ -1,6 +1,6 @@
 package it.rizzoli.listadapter;
 
-import android.content.Context;
+import  android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import it.rizzoli.model.Utente;
 import it.rizzoli.progettoescursioni.R;
 
-public class IscrizioniListAdapter extends ArrayAdapter<Utente> {
+public class  IscrizioniListAdapter extends ArrayAdapter<Utente> {
     Context ctx;
     int res;
 

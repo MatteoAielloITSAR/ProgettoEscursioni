@@ -9,6 +9,12 @@ public class Post {
     private String visibilita;
     private String tipologia;
 
+    public Post(String np,String des,String tipo){
+        nomePercorso=np;
+        descrizione=des;
+        tipologia=tipo;
+    }
+
     public int getId_Post() {
         return id_Post;
     }
