@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountVetrina"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="username" />
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nome" />
+
+        <TextView
+            android:id="@+id/cognome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="cognome" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nomePercorso1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nomePercorso1"/>
+
+            <TextView
+                android:id="@+id/descrizione1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="descrizione1"/>
+
+            <TextView
+                android:id="@+id/visibilita1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="visibilita1"/>
+
+            <TextView
+                android:id="@+id/standardPersonalizzato1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="standardPersonalizzato1"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/nomePercorsoN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nomePercorsoN"/>
+
+            <TextView
+                android:id="@+id/descrizioneN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="descrizioneN"/>
+
+            <TextView
+                android:id="@+id/visibilitaN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="visibilitaN"/>
+
+            <TextView
+                android:id="@+id/standardPersonalizzatoN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="standardPersonalizzatoN"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
