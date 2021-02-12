@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.zip.Inflater;
 
 import it.rizzoli.model.Post;
+import it.rizzoli.progettoescursioni.R;
 
 public class PostListAdapter extends ArrayAdapter<Post> {
     Context ctx;
@@ -34,16 +35,19 @@ public class PostListAdapter extends ArrayAdapter<Post> {
         LayoutInflater inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(res, parent, false);
 
-        TextView nameTextView = rowView.findViewById(R.id.nameTextView);
-        TextView surnameTextView = rowView.findViewById(R.id.surnameTextView);
-        TextView ageTextView = rowView.findViewById(R.id.ageTextView);
+        TextView usernameTextView = rowView.findViewById(R.id.usernameTextView);
+        TextView nomePTextView = rowView.findViewById(R.id.nomePTextView);
+        TextView descrizioneTextView = rowView.findViewById(R.id.descrizioneTextView);
+        TextView tipologiaTextView = rowView.findViewById(R.id.tipologiaTextView);
+        TextView visibilitaTextView = rowView.findViewById(R.id.visibilitaTextView);
 
-        Utente u = getItem(position);
-        String eta = "" + u.getEta();
+        Post p = getItem(position);
 
-        nameTextView.setText(u.getNome());
-        surnameTextView.setText(u.getCognome());
-        ageTextView.setText(eta);
+        usernameTextView.setText("");
+        nomePTextView.setText(p.getNomePercorso());
+        descrizioneTextView.setText(p.getDescrizione());
+        tipologiaTextView.setText(p.getTipologia());
+        visibilitaTextView.setText(p.getVisibilita());
 
         return rowView;
     }

@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import it.rizzoli.listadapter.IscrizioniListAdapter;
 import it.rizzoli.listadapter.PostListAdapter;
@@ -34,8 +35,8 @@ public class PostIscrizioniActivity extends AppCompatActivity {
         });
 
         ArrayList<Post> list=new ArrayList<>();
-        list.add(new Post("pippo","des1","tipo1"));
-        list.add(new Post("pluto","des2","tipo2"));
+        list.add(new Post("pippo", "asd", 2,"ss","a"));
+        list.add(new Post("pluto", "asad", 4,"aa","s"));
 
         PostListAdapter postListAdapter=new PostListAdapter(this,R.layout.list_post,list);
         ListView postListView = findViewById(R.id.percorsiListView);
