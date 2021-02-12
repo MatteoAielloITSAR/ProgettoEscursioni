@@ -47,6 +47,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -137,11 +141,28 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="477" y="266" key="#PSD" timestamp="1611425189409">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="477" y="266" key="#PSD/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1611425189409" />
+    <state x="669" y="106" key="#app" timestamp="1611425181392">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="669" y="106" key="#app/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1611425181392" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611425124780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1611425124780" />
     <state x="803" y="209" key="FileChooserDialogImpl" timestamp="1611004235898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="803" y="209" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611004235898" />
+    <state x="623" y="239" key="search.everywhere.popup" timestamp="1611425159064">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="239" key="search.everywhere.popup/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1611425159064" />
   </component>
 </project>
