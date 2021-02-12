@@ -5,7 +5,7 @@ public class Post {
     private int id_Post;
     private String nomePercorso;
     private String descrizione;
-    private String difficolta;
+    private int difficolta;
     private String visibilita;
     private String tipologia;
 
@@ -33,11 +33,11 @@ public class Post {
         this.descrizione = descrizione;
     }
 
-    public String getDifficolta() {
+    public int getDifficolta() {
         return difficolta;
     }
 
-    public void setDifficolta(String difficolta) {
+    public void setDifficolta(int difficolta) {
         this.difficolta = difficolta;
     }
 
