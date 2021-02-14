@@ -32,7 +32,7 @@ public class PostActivity extends AppCompatActivity {
         String stringUsername = bundle.getString("username");
         String stringNomePercorso = bundle.getString("nome percorso");
         String stringDescrizione = bundle.getString("descizione");
-        String stringTipologia = bundle.getString("Tipologia");
+        String stringTipologia = bundle.getString("tipologia");
         String stringDifficolta = bundle.getString("difficolta");
 
         TextView tvNomePercorso = findViewById(R.id.nomePercorso);
