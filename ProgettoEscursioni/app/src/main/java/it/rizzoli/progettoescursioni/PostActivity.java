@@ -25,13 +25,10 @@ public class PostActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         Bundle bundle = getIntent().getExtras();
         String stringUsername = bundle.getString("username");
         String stringNomePercorso = bundle.getString("nome percorso");
-        String stringDescrizione = bundle.getString("descizione");
+        String stringDescrizione = bundle.getString("descrizione");
         String stringTipologia = bundle.getString("tipologia");
         int intDifficolta = bundle.getInt("difficolta");
 
