@@ -49,13 +49,13 @@ public class SearchPostActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
                 Post p = postListAdapter.getItem(i);
                 Intent postIntent=new Intent(SearchPostActivity.this, PostActivity.class);
-
-
+                /*
+                postIntent.putExtra("utente", "utenteX");
                 postIntent.putExtra("nome percorso", p.getNomePercorso());
                 postIntent.putExtra("descrizione", p.getDescrizione());
                 postIntent.putExtra("tipologia", p.getTipologia());
                 postIntent.putExtra("difficolta", p.getDifficolta());
-
+                */
 
             }
         });
