@@ -10,7 +10,7 @@
     >
 
     <Button
-        android:id="@+id/usernameAccount"
+        android:id="@+id/username"
 
         android:layout_width="200dp"
         android:layout_height="50dp"
@@ -45,21 +45,21 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/descrizione"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/tipologia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/difficolta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
