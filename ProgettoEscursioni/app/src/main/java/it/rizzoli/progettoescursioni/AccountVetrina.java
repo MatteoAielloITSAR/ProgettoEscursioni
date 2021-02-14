@@ -23,8 +23,8 @@ public class AccountVetrina extends AppCompatActivity {
         setContentView(R.layout.activity_account_vetrina);
 
         ArrayList<Post> listaPost = new ArrayList<>();
-        listaPost.add(new Post("pippo", "asd", 0,"","a"));
-        listaPost.add(new Post("pluto", "asad", 0,"","s"));
+        listaPost.add(new Post("nomePost1", "descrizione", 3,"pubblico","standard"));
+        listaPost.add(new Post("nomePost2", "descrizione2", 2, "privato","personalizzato"));
 
         PostListAdapter postListAdapter = new PostListAdapter(this, R.layout.list_post, listaPost);
         ListView postvetrinaListView = findViewById(R.id.postvetrinaListView);
@@ -36,7 +36,7 @@ public class AccountVetrina extends AppCompatActivity {
                 Post p = postListAdapter.getItem(i);
                 Intent postIntent=new Intent(AccountVetrina.this, PostActivity.class);
 
-                postIntent.putExtra("utente", "utenteX");
+                postIntent.putExtra("username", "utenteX");
                 postIntent.putExtra("nome percorso", p.getNomePercorso());
                 postIntent.putExtra("descrizione", p.getDescrizione());
                 postIntent.putExtra("tipologia", p.getTipologia());
