@@ -16,7 +16,7 @@ public class PostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
 
-        Button btnUsername=findViewById(R.id.usernameAccount);
+        Button btnUsername=findViewById(R.id.username);
         btnUsername.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,10 +29,26 @@ public class PostActivity extends AppCompatActivity {
 
 
         Bundle bundle = getIntent().getExtras();
+        String stringUsername = bundle.getString("username");
         String stringNomePercorso = bundle.getString("nome percorso");
+        String stringDescrizione = bundle.getString("descizione");
+        String stringTipologia = bundle.getString("Tipologia");
+        String stringDifficolta = bundle.getString("difficolta");
 
         TextView tvNomePercorso = findViewById(R.id.nomePercorso);
         tvNomePercorso.setText(stringNomePercorso);
+
+        TextView tvDescrizione = findViewById(R.id.descrizione);
+        tvDescrizione.setText(stringDescrizione);
+
+        TextView tvTipologia = findViewById(R.id.tipologia);
+        tvTipologia.setText(stringTipologia);
+
+        TextView tvDifficolta = findViewById(R.id.difficolta);
+        tvDifficolta.setText(stringDifficolta);
+
+        btnUsername.setText(stringUsername);
+
 
 
       /*  TextView nameTextView = findViewById(R.id.nameTextView);
