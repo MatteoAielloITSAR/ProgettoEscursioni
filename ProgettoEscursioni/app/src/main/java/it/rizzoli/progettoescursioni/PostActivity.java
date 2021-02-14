@@ -33,7 +33,7 @@ public class PostActivity extends AppCompatActivity {
         String stringNomePercorso = bundle.getString("nome percorso");
         String stringDescrizione = bundle.getString("descizione");
         String stringTipologia = bundle.getString("tipologia");
-        String stringDifficolta = bundle.getString("difficolta");
+        int intDifficolta = bundle.getInt("difficolta");
 
         TextView tvNomePercorso = findViewById(R.id.nomePercorso);
         tvNomePercorso.setText(stringNomePercorso);
@@ -45,7 +45,7 @@ public class PostActivity extends AppCompatActivity {
         tvTipologia.setText(stringTipologia);
 
         TextView tvDifficolta = findViewById(R.id.difficolta);
-        tvDifficolta.setText(stringDifficolta);
+        tvDifficolta.setText(String.valueOf(intDifficolta));
 
         btnUsername.setText(stringUsername);
 
