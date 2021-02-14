@@ -37,6 +37,7 @@ public class AccountVetrina extends AppCompatActivity {
                 Intent postIntent=new Intent(AccountVetrina.this, PostActivity.class);
 
                /* postIntent.putExtra(SplashActivity.USERNAME_KEY, username);*/
+                postIntent.putExtra("nome percorso", p.getNomePercorso());
 
                 startActivity(postIntent);
             }

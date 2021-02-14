@@ -25,6 +25,16 @@ public class PostActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+        Bundle bundle = getIntent().getExtras();
+        String stringNomePercorso = bundle.getString("nome percorso");
+
+        TextView tvNomePercorso = findViewById(R.id.nomePercorso);
+        tvNomePercorso.setText(stringNomePercorso);
+
+
       /*  TextView nameTextView = findViewById(R.id.nameTextView);
 
         Bundle data = getIntent().getExtras();
