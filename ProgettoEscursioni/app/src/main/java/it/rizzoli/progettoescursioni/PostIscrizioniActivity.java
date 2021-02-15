@@ -5,7 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import it.rizzoli.listadapter.IscrizioniListAdapter;
+import it.rizzoli.listadapter.PostListAdapter;
+import it.rizzoli.model.Post;
+import it.rizzoli.model.Utente;
 
 public class PostIscrizioniActivity extends AppCompatActivity {
 
@@ -18,9 +29,33 @@ public class PostIscrizioniActivity extends AppCompatActivity {
         btnIscrizioni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(PostIscrizioniActivity.this, IscrizioniActivity.class);
-                startActivity(browserIntent);
+                Intent intent = new Intent(PostIscrizioniActivity.this, IscrizioniActivity.class);
+                startActivity(intent);
             }
         });
+
+        ArrayList<Post> list=new ArrayList<>();
+        list.add(new Post("pippo", "asd", 2,"ss","a"));
+        list.add(new Post("pluto", "asad", 4,"aa","s"));
+
+        PostListAdapter postListAdapter=new PostListAdapter(this,R.layout.list_post,list);
+        ListView postListView = findViewById(R.id.percorsiListView);
+        postListView.setAdapter(postListAdapter);
+
+        postListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Post p= postListAdapter.getItem(position);
+                String nome=p.getNomePercorso();
+                Toast.makeText(PostIscrizioniActivity.this,nome,Toast.LENGTH_LONG).show();
+
+                Intent postIntent = new Intent(PostIscrizioniActivity.this, PostActivity.class);
+                postIntent.putExtra("POST", p.getId_Post());
+                startActivity(postIntent);
+
+            }
+        });
+
+
     }
 }

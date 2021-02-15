@@ -25,7 +25,7 @@ public class UtenteController {
 		return repository.findAll();
 	}
 
-	@GetMapping("/utenti/{userename}")
+	@GetMapping("/utenti/{username}")
 	public Utente byUsername(@PathVariable String username) {
 		return repository.findById(username).orElseThrow();
 	}

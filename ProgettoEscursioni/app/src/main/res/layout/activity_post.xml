@@ -6,21 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".PostActivity"
     android:gravity="center">
+    android:layout_gravity="left"
+    >
 
     <Button
-        android:id="@+id/usernameAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Username"
+        android:id="@+id/username"
+
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_gravity="right"
-        />
+        android:layout_weight="1"
+        android:text="Username" />
+
 
     <Button
         android:id="@+id/visualizzaMappaPercorso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:layout_weight="1"
-        android:layout_gravity="left"
         android:text="Visualizza Mappa Percorso" />
+
+    <LinearLayout
+
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/nomePercorso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/descrizione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tipologia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/difficolta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+
+    </LinearLayout>
+
+
 </LinearLayout>
+

@@ -71,22 +71,34 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginRight="19dp"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text= "Nome: Alessandro" />
+
+                    <TextView
+                        android:id="@+id/cognome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text= "Cognome: Lazzari" />
 
                     <TextView
                         android:id="@+id/username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Username: __________" />
+                        android:text="Username: @principezuko" />
 
                     <TextView
                         android:id="@+id/sesso"
@@ -102,84 +114,25 @@
                         android:layout_toEndOf="@+id/imageView2"
                         android:text="Email: nome.cognome@email.com" />
                 </LinearLayout>
-
-
             </LinearLayout>
 
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:layout_marginTop="300dp">
+                android:layout_height="match_parent"
+                android:layout_marginTop="280dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:text="I TUOI PERCORSI:"
+                    android:textStyle="bold"/>
+            </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/nomePercorso1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="nomePercorso1"/>
-
-                    <TextView
-                        android:id="@+id/descrizione1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="descrizione1"/>
-
-                    <TextView
-                        android:id="@+id/visibilita1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="visibilita1"/>
-
-                    <TextView
-                        android:id="@+id/standardPersonalizzato1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="standardPersonalizzato1"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/nomePercorsoN"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="nomePercorsoN"/>
-
-                    <TextView
-                        android:id="@+id/descrizioneN"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="descrizioneN"/>
-
-                    <TextView
-                        android:id="@+id/visibilitaN"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="visibilitaN"/>
-
-                    <TextView
-                        android:id="@+id/standardPersonalizzatoN"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="standardPersonalizzatoN"/>
-                </LinearLayout>
-                </LinearLayout>
-
-            </ScrollView>
+            <ListView
+                android:id="@+id/postaccountListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </FrameLayout>
-
-
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

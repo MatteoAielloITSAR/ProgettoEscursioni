@@ -2,6 +2,7 @@ package it.rizzoli.progettoescursioni;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(LoginActivity.this, "btnRegistrati", Toast.LENGTH_SHORT).show();
+                Intent registratiIntent=new Intent(LoginActivity.this,RegistrazioneUtenteActivity.class);
+                startActivity(registratiIntent);
             }
         });
 
@@ -35,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(LoginActivity.this, "btnRecuperaPassword", Toast.LENGTH_SHORT).show();
+                Intent recuperaPwdIntent=new Intent(LoginActivity.this, RecuperopasswordActivity.class);
+                startActivity(recuperaPwdIntent);
             }
         });
 
@@ -42,6 +47,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(LoginActivity.this, "btnAccedi", Toast.LENGTH_SHORT).show();
+                Intent accediIntent=new Intent(LoginActivity.this, AccountActivity.class);
+                startActivity(accediIntent);
             }
         });
         
