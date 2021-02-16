@@ -26,8 +26,8 @@ public class PostActivity extends AppCompatActivity {
                 startActivity(postIntent2);
             }
         });
-
-        Bundle bundle = getIntent().getExtras();
+        Intent i = getIntent();
+        Bundle bundle = i.getExtras();
         String stringUsername = bundle.getString("username");
         String stringNomePercorso = bundle.getString("nome percorso");
         String stringDescrizione = bundle.getString("descrizione");
