@@ -41,7 +41,6 @@ public class AccountActivity extends AppCompatActivity {
                 postIntent.putExtra("nome percorso", p.getNomePercorso());
                 postIntent.putExtra("descrizione", p.getDescrizione());
                 postIntent.putExtra("tipologia", p.getTipologia());
-                postIntent.putExtra("difficolta", p.getDifficolta());
 
                 startActivity(postIntent);
             }

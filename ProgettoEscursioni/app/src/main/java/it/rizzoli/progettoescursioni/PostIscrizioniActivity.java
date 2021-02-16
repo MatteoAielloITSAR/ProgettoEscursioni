@@ -36,8 +36,8 @@ public class PostIscrizioniActivity extends AppCompatActivity {
         });
 
         ArrayList<UtentePost> list=new ArrayList<>();
-        list.add(new UtentePost(new Utente(),new Post("pippo", "asd", 2,"ss","a")));
-        list.add(new UtentePost(new Utente(),new Post("pluto", "asad", 4,"aa","s")));
+        list.add(new UtentePost(new Utente("utente1"),new Post("pippo", "asd", 2,"ss","a")));
+        list.add(new UtentePost(new Utente("utente2"),new Post("pluto", "asad", 4,"aa","s")));
 
         PostListAdapter postListAdapter=new PostListAdapter(this,R.layout.list_post,list);
         ListView postListView = findViewById(R.id.percorsiListView);
@@ -51,7 +51,7 @@ public class PostIscrizioniActivity extends AppCompatActivity {
                 Toast.makeText(PostIscrizioniActivity.this,nome,Toast.LENGTH_LONG).show();
 
                 Intent postIntent = new Intent(PostIscrizioniActivity.this, PostActivity.class);
-                postIntent.putExtra("POST", p.getId() );
+                postIntent.putExtra("POST", p.getId());
                 startActivity(postIntent);
 
             }
