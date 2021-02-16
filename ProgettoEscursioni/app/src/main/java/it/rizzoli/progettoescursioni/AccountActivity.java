@@ -45,23 +45,6 @@ public class AccountActivity extends AppCompatActivity {
             }
         });
 
-     /*   postaccountListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Post p = accpostListAdapter.getItem(i);
-                Intent postIntent=new Intent(AccountActivity.this, PostActivity.class);
-
-                 postIntent.putExtra(SplashActivity.USERNAME_KEY, username);
-                postIntent.putExtra("username", "");
-                postIntent.putExtra("nome percorso", p.getNomePercorso());
-                postIntent.putExtra("descrizione", p.getDescrizione());
-                postIntent.putExtra("tipologia", p.getTipologia());
-                postIntent.putExtra("difficolta", p.getDifficolta());
-
-                startActivity(postIntent);
-            }
-        });
-
         /*
         LinearLayout lyPost1=findViewById(R.id.lyPost1);
 
