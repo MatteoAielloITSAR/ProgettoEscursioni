@@ -28,7 +28,7 @@ public class AccountActivity extends AppCompatActivity {
         listaPostAcc.add(new UtentePost(new Utente(),new Post("pluto", "asad", 0,"","s")));
 
         PostListAdapter accpostListAdapter = new PostListAdapter(this, R.layout.list_post, listaPostAcc);
-        ListView postaccountListView = findViewById(R.id.postvetrinaListView);
+        ListView postaccountListView = findViewById(R.id.postaccountListView);
         postaccountListView.setAdapter(accpostListAdapter);
 
         postaccountListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -37,7 +37,24 @@ public class AccountActivity extends AppCompatActivity {
                 UtentePost p = accpostListAdapter.getItem(i);
                 Intent postIntent=new Intent(AccountActivity.this, PostActivity.class);
 
-                /* postIntent.putExtra(SplashActivity.USERNAME_KEY, username);*/
+                postIntent.putExtra("utente", "utenteX");
+                postIntent.putExtra("nome percorso", p.getNomePercorso());
+                postIntent.putExtra("descrizione", p.getDescrizione());
+                postIntent.putExtra("tipologia", p.getTipologia());
+                postIntent.putExtra("difficolta", p.getDifficolta());
+
+                startActivity(postIntent);
+            }
+        });
+
+     /*   postaccountListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Post p = accpostListAdapter.getItem(i);
+                Intent postIntent=new Intent(AccountActivity.this, PostActivity.class);
+
+                 postIntent.putExtra(SplashActivity.USERNAME_KEY, username);
+                postIntent.putExtra("username", "");
                 postIntent.putExtra("nome percorso", p.getNomePercorso());
                 postIntent.putExtra("descrizione", p.getDescrizione());
                 postIntent.putExtra("tipologia", p.getTipologia());
