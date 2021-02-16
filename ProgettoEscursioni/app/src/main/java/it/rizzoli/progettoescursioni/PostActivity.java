@@ -21,7 +21,9 @@ public class PostActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent postIntent = new Intent(PostActivity.this, AccountVetrina.class);
+                Intent postIntent2 = new Intent(PostActivity.this, SearchPostActivity.class);
                 startActivity(postIntent);
+                startActivity(postIntent2);
             }
         });
 
