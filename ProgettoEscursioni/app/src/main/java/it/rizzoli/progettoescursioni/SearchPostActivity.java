@@ -16,6 +16,8 @@ import java.util.ArrayList;
 
 import it.rizzoli.listadapter.PostListAdapter;
 import it.rizzoli.model.Post;
+import it.rizzoli.model.Utente;
+import it.rizzoli.model.UtentePost;
 
 public class SearchPostActivity extends AppCompatActivity {
 
@@ -27,9 +29,9 @@ public class SearchPostActivity extends AppCompatActivity {
         EditText editTextRicerca = findViewById(R.id.editTextRicerca);
         Button buttonSearch = findViewById(R.id.buttonSearch);
 
-        ArrayList<Post> listaPost = new ArrayList<>();
-        listaPost.add(new Post("Monte Bianco", "qwerty", 0, "", "a"));
-        listaPost.add(new Post("Monte Rosa", "ytrewq", 1, "", "c"));
+        ArrayList<UtentePost> listaPost = new ArrayList<>();
+        listaPost.add(new UtentePost(new Utente(),new Post("Monte Bianco", "qwerty", 0, "", "a")));
+        listaPost.add(new UtentePost(new Utente(),new Post("Monte Rosa", "ytrewq", 1, "", "c")));
         PostListAdapter postListAdapter = new PostListAdapter(this, R.layout.list_post, listaPost);
         ListView ricercapostListView = findViewById(R.id.ricercapostListView);
         ricercapostListView.setAdapter(postListAdapter);
@@ -47,15 +49,16 @@ public class SearchPostActivity extends AppCompatActivity {
         ricercapostListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
-                Post p = postListAdapter.getItem(i);
-                Intent postIntent=new Intent(SearchPostActivity.this, PostActivity.class);
-                /*
-                postIntent.putExtra("utente", "utenteX");
-                postIntent.putExtra("nome percorso", p.getNomePercorso());
-                postIntent.putExtra("descrizione", p.getDescrizione());
-                postIntent.putExtra("tipologia", p.getTipologia());
-                postIntent.putExtra("difficolta", p.getDifficolta());
-                */
+                UtentePost p = postListAdapter.getItem(i);
+                Intent postIntent2=new Intent(SearchPostActivity.this, PostActivity.class);
+
+                postIntent2.putExtra("utente", "utenteX");
+                postIntent2.putExtra("nome percorso", p.getNomePercorso());
+                postIntent2.putExtra("descrizione", p.getDescrizione());
+                postIntent2.putExtra("tipologia", p.getTipologia());
+
+                startActivity(postIntent2);
+
 
             }
         });

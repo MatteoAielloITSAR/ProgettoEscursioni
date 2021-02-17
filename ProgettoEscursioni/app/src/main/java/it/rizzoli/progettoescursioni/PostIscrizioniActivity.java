@@ -17,6 +17,7 @@ import it.rizzoli.listadapter.IscrizioniListAdapter;
 import it.rizzoli.listadapter.PostListAdapter;
 import it.rizzoli.model.Post;
 import it.rizzoli.model.Utente;
+import it.rizzoli.model.UtentePost;
 
 public class PostIscrizioniActivity extends AppCompatActivity {
 
@@ -34,9 +35,9 @@ public class PostIscrizioniActivity extends AppCompatActivity {
             }
         });
 
-        ArrayList<Post> list=new ArrayList<>();
-        list.add(new Post("pippo", "asd", 2,"ss","a"));
-        list.add(new Post("pluto", "asad", 4,"aa","s"));
+        ArrayList<UtentePost> list=new ArrayList<>();
+        list.add(new UtentePost(new Utente("utente1"),new Post("pippo", "asd", 2,"ss","a")));
+        list.add(new UtentePost(new Utente("utente2"),new Post("pluto", "asad", 4,"aa","s")));
 
         PostListAdapter postListAdapter=new PostListAdapter(this,R.layout.list_post,list);
         ListView postListView = findViewById(R.id.percorsiListView);
@@ -45,12 +46,12 @@ public class PostIscrizioniActivity extends AppCompatActivity {
         postListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Post p= postListAdapter.getItem(position);
+                UtentePost p= postListAdapter.getItem(position);
                 String nome=p.getNomePercorso();
                 Toast.makeText(PostIscrizioniActivity.this,nome,Toast.LENGTH_LONG).show();
 
                 Intent postIntent = new Intent(PostIscrizioniActivity.this, PostActivity.class);
-                postIntent.putExtra("POST", p.getId_Post());
+                postIntent.putExtra("POST", p.getId());
                 startActivity(postIntent);
 
             }
