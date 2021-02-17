@@ -27,7 +27,7 @@ public class PostIscrizioniActivity extends AppCompatActivity {
         setContentView(R.layout.activity_post_iscrizioni);
 
         Button btnIscrizioni=findViewById(R.id.buttonIscrizioni);
-        btnIscrizioni.setOnClickListener(new View.OnClickListener() {
+        btnIscrizioni.setOnClickListener(new View.OnClickListener() { 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PostIscrizioniActivity.this, IscrizioniActivity.class);
