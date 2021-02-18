@@ -36,6 +36,7 @@ public class AccountVetrina extends AppCompatActivity {
                 Post p = postListAdapter.getItem(i);
                 Intent postIntent=new Intent(AccountVetrina.this, PostActivity.class);
 
+
                 postIntent.putExtra("username", "utenteX");
                 postIntent.putExtra("nome percorso", p.getNomePercorso());
                 postIntent.putExtra("descrizione", p.getDescrizione());
