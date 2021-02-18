@@ -14,13 +14,14 @@ import java.util.ArrayList;
 import java.util.zip.Inflater;
 
 import it.rizzoli.model.Post;
+import it.rizzoli.model.UtentePost;
 import it.rizzoli.progettoescursioni.R;
 
-public class PostListAdapter extends ArrayAdapter<Post> {
+public class PostListAdapter extends ArrayAdapter<UtentePost> {
     Context ctx;
     int res;
 
-    public PostListAdapter(@NonNull Context context, int resource, ArrayList<Post> posts) {
+    public PostListAdapter(@NonNull Context context, int resource, ArrayList<UtentePost> posts) {
         super(context, resource);
 
         addAll(posts);
@@ -39,15 +40,13 @@ public class PostListAdapter extends ArrayAdapter<Post> {
         TextView nomePTextView = rowView.findViewById(R.id.nomePTextView);
         TextView descrizioneTextView = rowView.findViewById(R.id.descrizioneTextView);
         TextView tipologiaTextView = rowView.findViewById(R.id.tipologiaTextView);
-        TextView visibilitaTextView = rowView.findViewById(R.id.visibilitaTextView);
 
-        Post p = getItem(position);
+        UtentePost p = getItem(position);
 
-        usernameTextView.setText("");
+        usernameTextView.setText(p.getUsername());
         nomePTextView.setText(p.getNomePercorso());
         descrizioneTextView.setText(p.getDescrizione());
         tipologiaTextView.setText(p.getTipologia());
-        visibilitaTextView.setText(p.getVisibilita());
 
         return rowView;
     }

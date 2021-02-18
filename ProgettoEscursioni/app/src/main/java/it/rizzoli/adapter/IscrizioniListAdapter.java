@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-import it.rizzoli.database.Utente;
+import it.rizzoli.model.Utente;
 import it.rizzoli.progettoescursioni.R;
 
 public class IscrizioniListAdapter extends ArrayAdapter<Utente> {
