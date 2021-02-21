@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { PostIscrizioniComponent } from './post-iscrizioni/post-iscrizioni.component';
+import { RicercaPostComponent } from './ricerca-post/ricerca-post.component';
 
 const routes: Routes =  [
   {
@@ -11,6 +12,10 @@ const routes: Routes =  [
   {
     path: 'post-iscrizioni',
     component: PostIscrizioniComponent
+  },
+  {
+    path: 'ricerca-post',
+    component: RicercaPostComponent
   },
   {
     path: '',
@@ -24,4 +29,4 @@ const routes: Routes =  [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [PostIscrizioniComponent, AccountComponent]
+export const routingComponents = [PostIscrizioniComponent, AccountComponent, RicercaPostComponent]
