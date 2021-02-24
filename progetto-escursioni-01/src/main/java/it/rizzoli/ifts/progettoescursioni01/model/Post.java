@@ -1,10 +1,14 @@
 package it.rizzoli.ifts.progettoescursioni01.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Post {
@@ -27,6 +31,17 @@ public class Post {
 	
 	@Column(nullable = false, length = 20)
 	private String tipologiaPercorso;
+	
+	@ManyToOne
+	private Utente utente;
+	
+	@OneToMany(mappedBy = "post")
+	private List<Immagine> img;
+	
+	@Column(nullable = true)
+	private List<Attrezatura> attezzature;
+	
+	
 
 	public Integer getIdPost() {
 		return idPost;

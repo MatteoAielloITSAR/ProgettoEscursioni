@@ -11,11 +11,37 @@ public class Immagine {
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	private Integer idImmagine;
-	//aggiungere percorso_file(?)
 	
-	private String percorsoFile;
+	private Byte[] percorsoFile;
 	
 	@ManyToOne
 	private Post post;
+	
+	
+	
+
+	public Integer getIdImmagine() {
+		return idImmagine;
+	}
+
+	public void setIdImmagine(Integer idImmagine) {
+		this.idImmagine = idImmagine;
+	}
+
+	public Byte[] getPercorsoFile() {
+		return percorsoFile;
+	}
+
+	public void setPercorsoFile(Byte[] percorsoFile) {
+		this.percorsoFile = percorsoFile;
+	}
+
+	public Post getPost() {
+		return post;
+	}
+
+	public void setPost(Post post) {
+		this.post = post;
+	}
 
 }
