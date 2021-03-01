@@ -6,11 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Attrezatura {
+public class Attrezzatura {
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	private Integer idImmagine;
@@ -18,6 +18,6 @@ public class Attrezatura {
 	
 	private String nome;
 	
-	@OneToMany
+	@ManyToMany(mappedBy = "attrezzature")
 	private List<Post> post;
 }
