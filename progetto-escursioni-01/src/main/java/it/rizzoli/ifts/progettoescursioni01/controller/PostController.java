@@ -31,13 +31,14 @@ public class PostController {
 		return repository.findById(idPost).orElseThrow();
 	}
 
-	@PostMapping("/utenti")
-	public Utente inserisci(@RequestBody Utente utente) {
-		return repository.save(utente);
+	@PostMapping("/posts")
+	public Post inserisci(@RequestBody Post post) {
+		return repository.save(post);
 	}
-
-	@PutMapping("/utenti/{username}")
-	public Utente aggiorna(@RequestBody Utente utente, @PathVariable String username) {
+	
+	/*
+	@PutMapping("/posts/{idPost}") // da finireeeeeeeeeeeeeeeeeee
+	public Post aggiorna(@RequestBody Post post, @PathVariable int idPost) {
 		repository.findById(username).ifPresentOrElse((u) -> {
 			u.setNome(utente.getNome());
 			u.setCognome(utente.getCognome());
@@ -48,10 +49,11 @@ public class PostController {
 			});
 		return repository.findById(username).get();
 	}
+	*/
 	
-	@DeleteMapping("/utenti/{username}")
-	public void elimina(@PathVariable String username) {
-		repository.deleteById(username);	
+	@DeleteMapping("/posts/{idPost}")
+	public void elimina(@PathVariable int idPost) {
+		repository.deleteById(idPost);	
 	}
 	
 }

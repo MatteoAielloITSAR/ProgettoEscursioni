@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { PostIscrizioniComponent } from './post-iscrizioni/post-iscrizioni.component';
 import { RicercaPostComponent } from './ricerca-post/ricerca-post.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes =  [
   {
@@ -16,6 +17,10 @@ const routes: Routes =  [
   {
     path: 'ricerca-post',
     component: RicercaPostComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: '',
