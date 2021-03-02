@@ -2,6 +2,7 @@ package it.rizzoli.ifts.progettoescursioni01.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,7 +31,7 @@ public class Utente {
 	
 	@Column(nullable = false, length = 20)
 	private String password;
-
+	
 	@ManyToMany(mappedBy = "iscritti" )
 	private List<Utente> iscrizioni;
 	
@@ -42,7 +43,7 @@ public class Utente {
 	private List<Post> post;
 	
 	
-	
+
 	public String getUsername() {
 		return username;
 	}
