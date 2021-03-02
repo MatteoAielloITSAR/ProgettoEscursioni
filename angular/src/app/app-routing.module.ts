@@ -4,8 +4,7 @@ import { AccountComponent } from './account/account.component';
 import { PostIscrizioniComponent } from './post-iscrizioni/post-iscrizioni.component';
 import { PostComponent } from './post/post.component';
 import { RicercaPostComponent } from './ricerca-post/ricerca-post.component';
-import { LoginComponent } from './login/login.component';
-import { IscrizioniComponent } from './iscrizioni/iscrizioni.component';
+//import { LoginComponent } from './login/login.component';
 
 const routes: Routes =  [
   {
