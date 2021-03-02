@@ -37,6 +37,7 @@ public class Post {
 	
 	@JsonIgnore
 	@ManyToOne
+	@Column(nullable = false)
 	private Utente utente;
 	
 	@OneToMany(mappedBy = "post")
