@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.rizzoli.ifts.progettoescursioni01.model.Post;
-import it.rizzoli.ifts.progettoescursioni01.model.Utente;
+import it.rizzoli.ifts.progettoescursioni01.model.Post;
 import it.rizzoli.ifts.progettoescursioni01.repository.PostRepository;
-import it.rizzoli.ifts.progettoescursioni01.repository.UtenteRepository;
+import it.rizzoli.ifts.progettoescursioni01.repository.PostRepository;
 
 @RestController
 public class PostController {
@@ -31,27 +31,29 @@ public class PostController {
 		return repository.findById(idPost).orElseThrow();
 	}
 
-	@PostMapping("/utenti")
-	public Utente inserisci(@RequestBody Utente utente) {
-		return repository.save(utente);
+	@PostMapping("/posts")
+	public Post inserisci(@RequestBody Post post) {
+		return repository.save(post);
 	}
 
-	@PutMapping("/utenti/{username}")
-	public Utente aggiorna(@RequestBody Utente utente, @PathVariable String username) {
-		repository.findById(username).ifPresentOrElse((u) -> {
-			u.setNome(utente.getNome());
-			u.setCognome(utente.getCognome());
-			u.setPassword(utente.getPassword());
-			repository.save(u);
+	@PutMapping("/posts/{idPost}")
+	public Post aggiorna(@RequestBody Post post, @PathVariable int idPost) {
+		repository.findById(idPost).ifPresentOrElse((p) -> {
+			p.setNome_percorso(p.getNome_percorso());
+			p.setDescrizione(p.getDescrizione());
+			p.setDifficolta(p.getDifficolta());
+			p.setVisibilita(p.getVisibilita());
+			p.setTipologiaPercorso(p.getTipologiaPercorso());
+			repository.save(p);
 		}, () -> {
-			repository.save(utente);
+			repository.save(post);
 			});
-		return repository.findById(username).get();
+		return repository.findById(idPost).get();
 	}
 	
-	@DeleteMapping("/utenti/{username}")
-	public void elimina(@PathVariable String username) {
-		repository.deleteById(username);	
+	@DeleteMapping("/posts/{idPost}")
+	public void elimina(@PathVariable int idPost) {
+		repository.deleteById(idPost);	
 	}
 	
 }
