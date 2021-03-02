@@ -33,6 +33,7 @@ public class Punto {
 	
 	@JsonIgnore
 	@ManyToOne
+	@Column(nullable = false)
 	private Post post;
 
 	public Integer getIdPunto() {
