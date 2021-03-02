@@ -11,6 +11,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Post {
 	
@@ -21,10 +23,10 @@ public class Post {
 	@Column(nullable = false, length = 50)
 	private String nome_percorso;
 	
-	@Column(length = 500)
+	@Column(nullable = false,length = 500)
 	private String descrizione;
 	
-	@Column(length = 10)
+	@Column(length = 10,nullable = false)
 	private Integer difficolta;
 	
 	@Column(nullable = false, length = 10)
@@ -33,14 +35,20 @@ public class Post {
 	@Column(nullable = false, length = 20)
 	private String tipologiaPercorso;
 	
+	@JsonIgnore
 	@ManyToOne
 	private Utente utente;
 	
 	@OneToMany(mappedBy = "post")
+	@Column(nullable = false)
 	private List<Immagine> img;
 	
+	@OneToMany(mappedBy = "post")
+	@Column(nullable = false)
+	private List<Punto> punti;
 	
 	@ManyToMany
+	@Column(nullable = true)
 	private List<Attrezzatura> attrezzature;
 	
 	

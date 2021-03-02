@@ -43,7 +43,7 @@ public class Utente {
 	private List<Post> post;
 	
 	
-	
+
 	public String getUsername() {
 		return username;
 	}
