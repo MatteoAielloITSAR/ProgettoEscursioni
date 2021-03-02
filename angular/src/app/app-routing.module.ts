@@ -4,7 +4,8 @@ import { AccountComponent } from './account/account.component';
 import { PostIscrizioniComponent } from './post-iscrizioni/post-iscrizioni.component';
 import { PostComponent } from './post/post.component';
 import { RicercaPostComponent } from './ricerca-post/ricerca-post.component';
-//import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './login/login.component';
+import { IscrizioniComponent } from './iscrizioni/iscrizioni.component';
 
 const routes: Routes =  [
   {
@@ -24,10 +25,14 @@ const routes: Routes =  [
     path: 'post',
     component: PostComponent
   },
-  /*{
+  {
     path: 'login',
     component: LoginComponent
-  },*/
+  },
+  {
+    path: 'iscrizioni',
+    component: IscrizioniComponent
+  },
   {
     path: '',
     redirectTo: '/account',
@@ -40,4 +45,5 @@ const routes: Routes =  [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [PostIscrizioniComponent, AccountComponent, RicercaPostComponent, PostComponent]
+export const routingComponents = [PostIscrizioniComponent, AccountComponent, RicercaPostComponent, 
+  PostComponent, IscrizioniComponent]
