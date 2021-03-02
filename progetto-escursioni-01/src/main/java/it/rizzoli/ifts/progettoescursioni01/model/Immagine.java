@@ -20,7 +20,6 @@ public class Immagine {
 	
 	@JsonIgnore
 	@ManyToOne
-	@Column(nullable = false)
 	private Post post;
 	
 	
