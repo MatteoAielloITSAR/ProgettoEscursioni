@@ -5,6 +5,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RegistrazioneComponent } from './registrazione/registrazione.component'
     AppComponent,
     routingComponents,
     LoginComponent,
-    RegistrazioneComponent
+    RegistrazioneComponent,
+    MenuComponent
     
   ],
   imports: [

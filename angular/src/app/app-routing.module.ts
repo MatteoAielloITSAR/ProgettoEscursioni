@@ -5,6 +5,7 @@ import { PostIscrizioniComponent } from './post-iscrizioni/post-iscrizioni.compo
 import { RicercaPostComponent } from './ricerca-post/ricerca-post.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
+import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes =  [
   {
@@ -28,8 +29,12 @@ const routes: Routes =  [
     component: RegistrazioneComponent
   },
   {
+    path: 'menu',
+    component: MenuComponent
+  },
+  {
     path: '',
-    redirectTo: '/account',
+    redirectTo: '/menu',
     pathMatch: 'full'
   }
 ];
@@ -39,4 +44,4 @@ const routes: Routes =  [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [PostIscrizioniComponent, AccountComponent, RicercaPostComponent]
+export const routingComponents = [PostIscrizioniComponent, AccountComponent, RicercaPostComponent,LoginComponent,RegistrazioneComponent,MenuComponent]
