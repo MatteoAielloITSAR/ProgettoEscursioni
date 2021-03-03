@@ -1,1 +1,23 @@
-<p>registrazione works!</p>
+
+<div class="text-center">
+    <form class="form-signin">
+        <img class="mb-4" src="..." alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Registrazione</h1>
+        <label for="inputCod" class="sr-only">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Username" required autofocus #username>
+        <br>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Password" required #password>
+        <br>
+        <label for="inputPassword" class="sr-only">Ripeti Password</label>
+        <input type="password" id="ripPassword" class="form-control" placeholder="Ripeti Password" required #ripPassword>
+        <br>
+        <label for="inputPassword" class="sr-only">Nome</label>
+        <input type="text" id="nome" class="form-control" placeholder="Nome" required #nome>
+        <br>
+        <label for="inputPassword" class="sr-only">Cognome</label>
+        <input type="text" id="cognome" class="form-control" placeholder="Cognome" required #cognome>
+        <br>
+        <a routerLink="/login"><button class="btn btn-lg btn-primary btn-block" type="button" (click)="register(username.value,password.value,ripPassword.value,nome.value,cognome.value)">Registrati</button></a>
+    </form>
+</div>

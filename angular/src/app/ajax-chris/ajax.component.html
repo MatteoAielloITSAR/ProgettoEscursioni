@@ -1,0 +1,11 @@
+<h1>AJAX</h1>
+<p>Per far funzionare AJAX in un'applicazione Angular, devo aggiungere all'applicazione il
+    modulo HttpClientModule.<br>
+    Questo si fa dal modulo principale dell'applicazione che si trova nel file app.module.ts<br>
+    L'importazione va fatta nella collezione imports: []
+</p>
+<div class="btn btn-secondary" (click)="richiestaHttp()">Avvia request HTTP</div>
+<ul>
+    <li *ngFor="let tappa of tappe">idPunto: {{tappa.idPunto}}; 
+        Nome <strong>{{tappa.nome}}</strong></li>
+</ul>

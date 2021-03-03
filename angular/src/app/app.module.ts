@@ -5,6 +5,8 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
+import { MenuComponent } from './menu/menu.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -13,12 +15,14 @@ import { RegistrazioneComponent } from './registrazione/registrazione.component'
     AppComponent,
     routingComponents,
     LoginComponent,
-    RegistrazioneComponent
+    RegistrazioneComponent,
+    MenuComponent
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
