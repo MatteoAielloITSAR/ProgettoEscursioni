@@ -1,0 +1,58 @@
+package it.rizzoli.ifts.progettoescursioni01.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import it.rizzoli.ifts.progettoescursioni01.model.Punto;
+import it.rizzoli.ifts.progettoescursioni01.repository.PuntoRepository;
+
+@RestController
+public class AttrezzaturaController {
+	
+	@Autowired
+	private AttrezzaturaRepository repository;
+	
+	@GetMapping("/attrezzo")
+	public List<attrezzatura> all() {
+		return repository.findAll();
+	}
+
+	@GetMapping("/attrezzo/{idAttrezzatura}")
+	public Attrezzatura byAttrezzo(@PathVariable String idAttrezzatura) {
+		return repository.findById(idAttrezzatura).orElseThrow();
+	}
+
+	@PostMapping("/Attrezzo")
+	public Attrezzatura inserisci(@RequestBody Attrezzatura attrezzo) {
+		return repository.save(attrezzo);
+	}
+	
+	@PutMapping("/Attrezzo/{idAttrezzatura}")
+	public Attrezzatura aggiorna(@RequestBody Attrezzatura attrezzo, @PathVariable String idAttrezzatura) {
+		repository.findById(idAttrezzatura).ifPresentOrElse((a) -> {
+			p.setNome(tappa.getNome());
+			p.setLatitudine(tappa.getLatitudine());
+			p.setLongitudine(tappa.getLongitudine());
+			p.setOrdine(tappa.getOrdine());
+			p.setPoi(tappa.getPoi());
+			repository.save(p);
+		}, () -> {
+			repository.save(tappa);
+			});
+		return repository.findById(idPunto).get();
+	}
+	
+	@DeleteMapping("/tappe/{idPunto}")
+	public void elimina(@PathVariable Integer idPunto) {
+		repository.deleteById(idPunto);	
+	}
+
+}
