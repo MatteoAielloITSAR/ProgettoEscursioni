@@ -5,6 +5,7 @@ import { PostIscrizioniComponent } from './post-iscrizioni/post-iscrizioni.compo
 import { RicercaPostComponent } from './ricerca-post/ricerca-post.component';
 import { LoginComponent } from './login/login.component';
 import { AccountVetrinaComponent } from './account-vetrina/account-vetrina.component';
+import { RegistrazioneComponent } from './registrazione/registrazione.component';
 
 const routes: Routes =  [
   {
@@ -24,9 +25,15 @@ const routes: Routes =  [
     component: LoginComponent
   },
   {
-    path: 'account-vetrina',
-    component: AccountVetrinaComponent
+    path: 'registrazione',
+    component: RegistrazioneComponent
+  },
+  
+
+  {path: 'account-vetrina',
+  component: AccountVetrinaComponent
   }, 
+
   {
     path: '',
     redirectTo: '/account',
