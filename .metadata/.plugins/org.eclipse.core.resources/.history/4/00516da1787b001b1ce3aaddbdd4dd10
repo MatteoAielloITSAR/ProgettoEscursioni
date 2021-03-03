@@ -1,0 +1,56 @@
+package it.rizzoli.ifts.progettoescursioni01.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import it.rizzoli.ifts.progettoescursioni01.model.Utente;
+import it.rizzoli.ifts.progettoescursioni01.repository.UtenteRepository;
+
+@RestController
+public class AttrezzaturaController {
+	
+	@Autowired
+	private UtenteRepository repository;
+
+	@GetMapping("/Attrezzatura")
+	public List<attrezzatura> all() {
+		return repository.findAll();
+	}
+
+	@GetMapping("/Attrezzatura/{attrezzo}")
+	public attrezzatura byAttrezzatura(@PathVariable String attrezzo) {
+		return repository.findById(attrezzo).orElseThrow();
+	}
+
+	@PostMapping("/attrezzo")
+	public attrezzatura inserisci(@RequestBody Utente utente) {
+		return repository.save(attrezzo);
+	}
+
+	@PutMapping("/attrezzo/{attrezzatura}")
+	public Utente aggiorna(@RequestBody attrezzo attrezzo, @PathVariable String attrezzatura) {
+		repository.findById(attrezzatura).ifPresentOrElse((u) -> {
+			u.setNome(attrezzo.getNome());
+			u.setCognome(attrez.getCognome());
+			u.setPassword(utente.getPassword());
+			repository.save(u);
+		}, () -> {
+			repository.save(utente);
+			});
+		return repository.findById(username).get();
+	}
+	
+	@DeleteMapping("/utenti/{username}")
+	public void elimina(@PathVariable String username) {
+		repository.deleteById(username);	
+	}
+
+}
