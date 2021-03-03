@@ -5,6 +5,8 @@ import { PostIscrizioniComponent } from './post-iscrizioni/post-iscrizioni.compo
 import { RicercaPostComponent } from './ricerca-post/ricerca-post.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
+import { PostComponent } from './post/post.component';
+import { PuntoComponent } from './punto/punto.component';
 
 const routes: Routes =  [
   {
@@ -16,12 +18,20 @@ const routes: Routes =  [
     component: PostIscrizioniComponent
   },
   {
+    path: 'post',
+    component: PostComponent
+  },
+  {
     path: 'ricerca-post',
     component: RicercaPostComponent
   },
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'punto',
+    component: PuntoComponent
   },
   {
     path: 'registrazione',
@@ -39,4 +49,5 @@ const routes: Routes =  [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [PostIscrizioniComponent, AccountComponent, RicercaPostComponent]
+export const routingComponents = [PostIscrizioniComponent, AccountComponent, 
+  RicercaPostComponent, PostComponent, PuntoComponent]

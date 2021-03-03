@@ -1,0 +1,26 @@
+<h3>Elenco tappe</h3>
+
+<div class="btn btn-secondary" (click)="richiestaHttp()">Avvia request HTTP</div>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">idPunto</th>
+        <th scope="col">Nome</th>
+        <th scope="col">latitudine</th>
+        <th scope="col">longitudine</th>
+        <th scope="col">PoI</th>
+        <th scope="col">ordine</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tappa of tappe">
+        <th scope="row">{{tappa.idPunto}}</th>
+        <td>{{tappa.nome}}</td>
+        <td>{{tappa.latitudine}}</td>
+        <td>{{tappa.longitudine}}</td>
+        <td>{{tappa.poi}}</td>
+        <td>{{tappa.ordine}}</td>
+      </tr>
+    </tbody>
+  </table>
