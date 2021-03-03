@@ -25,6 +25,7 @@ export class RegistrazioneComponent implements OnInit {
        utente.username=user;
        this.http.post<Utente>('http://localhost:8080/utenti', utente).subscribe();
     }
+    
   }
 
 
