@@ -24,9 +24,12 @@ export class AccountComponent implements OnInit {
       console.log(this.utenti.length)
       for(var i = 0; i < this.utenti.length; i++) {
         console.log(this.utenti[i]);
+        /*
         if (this.utenti[i].nome == 'nome1') {
           this.utente = this.utenti[i]
         }
+        */
+       
       }
       
     });
