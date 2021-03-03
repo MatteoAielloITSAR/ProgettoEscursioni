@@ -4,12 +4,12 @@
         <img class="mb-4" src="..." alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Login</h1>
         <label for="inputCod" class="sr-only">Username</label>
-        <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+        <input type="text" id="username" class="form-control" placeholder="Username" required autofocus #username>
         <br>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="password" class="form-control" placeholder="Password" required>
+        <input type="password" id="password" class="form-control" placeholder="Password" required #password>
         <br>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <a routerLink="/menu"><button class="btn btn-lg btn-primary btn-block" type="button" (click)="login(username.value,password.value)">Sign in</button></a>
         <a class="btn btn-link" type="button" routerLink="/registrazione">Registrati</a>
     </form>
 </div>

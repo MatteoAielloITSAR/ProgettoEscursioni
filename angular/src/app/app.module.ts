@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,8 +5,8 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
-import { PuntoComponent } from './punto/punto.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MenuComponent } from './menu/menu.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -16,14 +15,13 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     routingComponents,
     LoginComponent,
     RegistrazioneComponent,
-    PuntoComponent,
-    ToolbarComponent
+    MenuComponent
     
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,8 +5,7 @@ import { PostIscrizioniComponent } from './post-iscrizioni/post-iscrizioni.compo
 import { RicercaPostComponent } from './ricerca-post/ricerca-post.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
-import { PostComponent } from './post/post.component';
-import { PuntoComponent } from './punto/punto.component';
+import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes =  [
   {
@@ -18,10 +17,6 @@ const routes: Routes =  [
     component: PostIscrizioniComponent
   },
   {
-    path: 'post',
-    component: PostComponent
-  },
-  {
     path: 'ricerca-post',
     component: RicercaPostComponent
   },
@@ -30,16 +25,16 @@ const routes: Routes =  [
     component: LoginComponent
   },
   {
-    path: 'punto',
-    component: PuntoComponent
-  },
-  {
     path: 'registrazione',
     component: RegistrazioneComponent
   },
   {
+    path: 'menu',
+    component: MenuComponent
+  },
+  {
     path: '',
-    redirectTo: '/account',
+    redirectTo: '/menu',
     pathMatch: 'full'
   }
 ];
@@ -49,5 +44,4 @@ const routes: Routes =  [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [PostIscrizioniComponent, AccountComponent, 
-  RicercaPostComponent, PostComponent, PuntoComponent]
+export const routingComponents = [PostIscrizioniComponent, AccountComponent, RicercaPostComponent,LoginComponent,RegistrazioneComponent,MenuComponent]
