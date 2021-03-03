@@ -4,6 +4,7 @@ import { AccountComponent } from './account/account.component';
 import { PostIscrizioniComponent } from './post-iscrizioni/post-iscrizioni.component';
 import { RicercaPostComponent } from './ricerca-post/ricerca-post.component';
 import { LoginComponent } from './login/login.component';
+import { RegistrazioneComponent } from './registrazione/registrazione.component';
 
 const routes: Routes =  [
   {
@@ -21,6 +22,10 @@ const routes: Routes =  [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'registrazione',
+    component: RegistrazioneComponent
   },
   {
     path: '',
