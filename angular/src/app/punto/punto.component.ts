@@ -21,15 +21,13 @@ export class PuntoComponent implements OnInit {
   }
 
   richiestaHttp() {
-    // la chiamata get verrà eseguita solo se io chiamo la funzione subscribe()
     console.log('inizio');
-    // nelle parentesi angolari <>, indico il tipo di dato che mi aspetto da GET
-    this.http.get<any[]>('http://localhost:8080/tappe').subscribe((dati) => {
-      // questa funzione viene richiamata dall'http client quando
-      // la richiesta al web server si è completata
+
+    this.http.get<Punto[]>('http://localhost:8080/tappe').subscribe((dati) => {
       console.log(dati);
       this.tappe = dati;
     });
+
     console.log('fine della funzione');
   }
 

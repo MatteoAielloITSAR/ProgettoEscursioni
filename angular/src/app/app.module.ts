@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
 import { PuntoComponent } from './punto/punto.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PuntoComponent } from './punto/punto.component';
     routingComponents,
     LoginComponent,
     RegistrazioneComponent,
-    PuntoComponent
+    PuntoComponent,
+    ToolbarComponent
     
   ],
   imports: [
