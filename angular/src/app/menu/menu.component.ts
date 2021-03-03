@@ -13,7 +13,11 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.id==Ut.idUtente;
+  }
+
+  carica(){
+    this.id=Ut.idUtente;
+    alert(this.id);
   }
 
 }
