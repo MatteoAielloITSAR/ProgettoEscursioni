@@ -1,3 +1,5 @@
 progetto-escursioni-01/.settings/org.eclipse.m2e.core.prefs
 progetto-escursioni-angular/node_modules/.bin/
 progetto-escursioni-angular/
+.metadata/
+.gitignore.rej
