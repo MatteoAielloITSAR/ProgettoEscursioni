@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ut } from '../model/ut';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  id:number;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  carica(){
+    this.id=Ut.idUtente;
+    alert(this.id);
   }
 
 }
