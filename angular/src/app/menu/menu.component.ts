@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ut } from '../model/ut';
+
 
 @Component({
   selector: 'app-menu',
@@ -10,14 +10,20 @@ export class MenuComponent implements OnInit {
 
   id:number;
 
-  constructor() { }
+  constructor() {
+    if(localStorage.getItem('utente').length==0){
+      window.location.href="/login";
+    }
+   }
 
   ngOnInit(): void {
   }
 
-  carica(){
-    this.id=Ut.idUtente;
-    alert(this.id);
+  logout(){
+    localStorage.removeItem('utente');
+    window.location.href="/login";
   }
+
+  
 
 }

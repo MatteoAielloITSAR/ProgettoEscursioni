@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Ut} from '../model/ut';
+import { Utente } from '../model/utente';
+
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import {Ut} from '../model/ut';
 export class LoginComponent implements OnInit {
 
   utenti:any[];
-  id:number=null;
+  ut:Utente=null;
 
   constructor(
     private http: HttpClient,
@@ -26,14 +27,14 @@ export class LoginComponent implements OnInit {
       this.utenti = dati;
       for(let i=0;i< this.utenti.length;i++){
         if(this.utenti[i].username==user&&this.utenti[i].password==pass){
-          Ut.idUtente=this.utenti[i].idUtente;
+          this.ut=this.utenti[i];
         }
       }
-      alert(Ut.idUtente);
-      if(Ut.idUtente==null){
+      if(this.ut==null){
         alert("Username o Password errati");
       }
       else{
+        localStorage.setItem('utente',JSON.stringify(this.ut));
         window.location.href="/menu";
       }
     });
