@@ -9,6 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PuntoComponent } from './punto/punto.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AccountVetrinaComponent } from './account-vetrina/account-vetrina.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes =  [
   {
@@ -48,6 +49,10 @@ const routes: Routes =  [
     component: AccountVetrinaComponent
   },
   {
+    path: 'post',
+    component: PostComponent
+  },
+  {
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
@@ -59,6 +64,6 @@ const routes: Routes =  [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [PostIscrizioniComponent, AccountComponent, AccountVetrinaComponent, 
+export const routingComponents = [PostIscrizioniComponent, AccountComponent, AccountVetrinaComponent, PostComponent, 
   RicercaPostComponent, LoginComponent, RegistrazioneComponent, 
   MenuComponent, PuntoComponent, ToolbarComponent]
