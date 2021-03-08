@@ -9,7 +9,11 @@ import { MenuComponent } from './menu/menu.component';
 import { PuntoComponent } from './punto/punto.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AccountVetrinaComponent } from './account-vetrina/account-vetrina.component';
+<<<<<<< HEAD
 import { ListaUtentiComponent } from './lista-utenti/lista-utenti.component';
+=======
+import { PostComponent } from './post/post.component';
+>>>>>>> ef69bbb949e9c70f5bd3ddcdcbf3e12ae2409c64
 
 const routes: Routes =  [
   {
@@ -49,8 +53,13 @@ const routes: Routes =  [
     component: AccountVetrinaComponent
   },
   {
+<<<<<<< HEAD
     path: 'utenti',
     component: ListaUtentiComponent
+=======
+    path: 'post',
+    component: PostComponent
+>>>>>>> ef69bbb949e9c70f5bd3ddcdcbf3e12ae2409c64
   },
   {
     path: '',
@@ -64,7 +73,13 @@ const routes: Routes =  [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+<<<<<<< HEAD
 export const routingComponents = [PostIscrizioniComponent, AccountComponent, 
   AccountVetrinaComponent, RicercaPostComponent, RegistrazioneComponent, 
   LoginComponent, MenuComponent, PuntoComponent, ToolbarComponent,
 ListaUtentiComponent]
+=======
+export const routingComponents = [PostIscrizioniComponent, AccountComponent, AccountVetrinaComponent, PostComponent, 
+  RicercaPostComponent, LoginComponent, RegistrazioneComponent, 
+  MenuComponent, PuntoComponent, ToolbarComponent]
+>>>>>>> ef69bbb949e9c70f5bd3ddcdcbf3e12ae2409c64
