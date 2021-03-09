@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../model/Post';
 
 @Component({
   selector: 'app-post-iscrizioni',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-iscrizioni.component.css']
 })
 export class PostIscrizioniComponent implements OnInit {
+
+  postIscr:any[];
 
   constructor() { }
 
