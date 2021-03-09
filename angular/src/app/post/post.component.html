@@ -13,14 +13,15 @@
         <h1>Post</h1>
         <div id="informazioni" class="container-fluid">
             <div id="visualizza-utente" class="row">
-                <button id="utente-vetrina" type="button" class="btn btn-primary" onclick="toAccountUtenteVetrina();">"username"</button>
+                <button id="utente-vetrina" type="button" class="btn btn-primary"  onclick="toAccountUtenteVetrina()"  routerLink="/utente">{{utente.username}}</button>
             </div>
             <div id="dati-personali" class="row">
-                <div class="col">
-                    <span id="nome-percorso">"nome-percorso"</span><br>
-                    <span id="descrizione">"descrizione"</span><br>
-                    <span id="standard-personalizzato">"standard/personalizzato"</span><br>
-                    <span id="difficolta">"difficoltà"</span><br>
+<!--                    <div id="posts" *ngFor="let p of posts">-->
+                    <div id="posts" *ngFor="let p of utente.post">
+                    <span id="nome-percorso">{{p.nome_percorso}}</span><br>
+                    <span id="descrizione">{{p.descrizione}}</span><br>
+                    <span id="standard-personalizzato">{{p.standard-personalizzato}}</span><br>
+                    <span id="tipologia-percorso">{{p.tipologiaPercorso}}</span><br>
                 </div>
             </div>
         </div>
@@ -37,4 +38,6 @@
         <script 
             src="post.js">
         </script>
-    <!--/body-->
+    <!--/body
+    <div class="col">
+    -->
