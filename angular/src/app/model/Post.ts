@@ -1,8 +1,11 @@
+import { Utente } from "./utente";
+
 export class Post {
     idPost: number;
-    nome : string;
+    nome_percorso : string;
     descrizione: string;
-    tipologiaPercorso: string;
     difficolta : string;
     visibilita : string;
+    tipologiaPercorso: string;
+    utente : any;
 } 

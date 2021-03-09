@@ -7,6 +7,20 @@
     {{utente.nome}} {{utente.cognome}}
 </p>
 
+<tr *ngFor="let p of utente.post">
+    <p>{{p.nome_percorso}}</p>
+</tr>
+
+<!--{{utente.post[0].nome_percorso}}-->
+
+<!--
+<tr *ngFor="let libro of libri">
+    <th scope="row">{{libro.codiceISBN}}</th>
+    <td>{{libro.titolo}}</td>
+    <td>{{libro.numeroPagine}}</td>
+    <td>{{libro.genere?.nome}}</td>
+  </tr>
+-->
 
 <button id="utente-vetrina" type="button" routerLink = "/post">
     <div id="username">"username"</div>
