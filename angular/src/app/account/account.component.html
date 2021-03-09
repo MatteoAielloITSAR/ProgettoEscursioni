@@ -7,9 +7,16 @@
     {{utente.nome}} {{utente.cognome}}
 </p>
 
-<tr *ngFor="let p of utente.post">
-    <p>{{p.nome_percorso}}</p>
-</tr>
+<p *ngFor="let p of utente.post">
+    <button>
+        <strong>{{p.nome_percorso}}</strong><br>
+        {{p.descrizione}}<br>
+        {{p.visibilita}}<br>
+        {{p.tipologiaPercorso}}
+    </button>
+</p>
+
+<br>
 
 <!--{{utente.post[0].nome_percorso}}-->
 

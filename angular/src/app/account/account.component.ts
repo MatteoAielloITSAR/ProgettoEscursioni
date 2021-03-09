@@ -20,8 +20,8 @@ export class AccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.utente = JSON.parse(localStorage.getItem('utente'));
-    console.log(localStorage.getItem('utente'))
-    console.log(JSON.stringify(this.utente.post[0].nome_percorso));
+    // console.log(localStorage.getItem('utente'))
+    console.log(JSON.stringify(this.utente.post));
     
 
     /*
