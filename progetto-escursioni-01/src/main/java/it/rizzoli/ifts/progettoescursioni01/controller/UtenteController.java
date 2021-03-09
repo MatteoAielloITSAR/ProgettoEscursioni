@@ -28,9 +28,9 @@ public class UtenteController {
 		return repository.findAll();
 	}
 
-	@GetMapping("/utenti/{username}")
-	public Utente byUsername(@PathVariable Integer username) {
-		return repository.findById(username).orElseThrow();
+	@GetMapping("/utenti/{id}")
+	public Utente byUsername(@PathVariable Integer id) {
+		return repository.findById(id).orElseThrow();
 	}
 
 	@PostMapping("/utenti")
@@ -38,9 +38,9 @@ public class UtenteController {
 		return repository.save(utente);
 	}
 
-	@PutMapping("/utenti/{username}")
-	public Utente aggiorna(@RequestBody Utente utente, @PathVariable Integer username) {
-		repository.findById(username).ifPresentOrElse((u) -> {
+	@PutMapping("/utenti/{id}")
+	public Utente aggiorna(@RequestBody Utente utente, @PathVariable Integer id) {
+		repository.findById(id).ifPresentOrElse((u) -> {
 			u.setNome(utente.getNome());
 			u.setCognome(utente.getCognome());
 			u.setPassword(utente.getPassword());
@@ -48,12 +48,18 @@ public class UtenteController {
 		}, () -> {
 			repository.save(utente);
 			});
-		return repository.findById(username).get();
+		return repository.findById(id).get();
 	}
 	
-	@DeleteMapping("/utenti/{username}")
-	public void elimina(@PathVariable Integer username) {
-		repository.deleteById(username);	
+	@DeleteMapping("/utenti/{id}")
+	public void elimina(@PathVariable Integer id) {
+		repository.deleteById(id);	
+	}
+	
+	@GetMapping("/iscrizioni/{id}")
+	public List<Utente> iscrizioni(@PathVariable Integer id) {
+		Utente u= repository.findById(id).orElseThrow();
+		return u.getIscrizioni();
 	}
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../model/Post';
+import { HttpClient } from '@angular/common/http';
+import { Utente } from '../model/utente';
 
 @Component({
   selector: 'app-post-iscrizioni',
@@ -8,11 +9,19 @@ import { Post } from '../model/Post';
 })
 export class PostIscrizioniComponent implements OnInit {
 
-  postIscr:any[];
+  postIscr:Utente[];
+  ut:Utente;
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) {
+    this.ut=JSON.parse(localStorage.getItem('utente'));
+   }
 
   ngOnInit(): void {
+    this.http.get<any[]>('http://localhost:8080/iscrizioni/'+this.ut.idUtente).subscribe((dati) => {
+      this.postIscr=dati;
+    });
   }
 
 }
