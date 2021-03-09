@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import it.rizzoli.ifts.progettoescursioni01.model.Post;
 import it.rizzoli.ifts.progettoescursioni01.model.Utente;
 import it.rizzoli.ifts.progettoescursioni01.repository.UtenteRepository;
 
@@ -23,19 +24,29 @@ public class UtenteController {
 	@Autowired
 	private UtenteRepository repository;
 	
+	
+	
+	@PostMapping("/utenti/{idUtente}")
+	public Utente inserisciPost(@RequestBody Post post, @PathVariable Integer idUtente) {
+		Utente utente = repository.findById(idUtente).orElseThrow();
+		utente.getPost().add(post);
+		return repository.save(utente);
+	}
+	
 	@GetMapping("/utenti")
 	public List<Utente> all() {
 		return repository.findAll();
 	}
 
-	@GetMapping("/utenti/{username}")
-	public Utente byUsername(@PathVariable Integer username) {
-		return repository.findById(username).orElseThrow();
-	}
 
 	@PostMapping("/utenti")
 	public Utente inserisci(@RequestBody Utente utente) {
 		return repository.save(utente);
+	}
+
+	@GetMapping("/utenti/{username}")
+	public Utente byUsername(@PathVariable Integer username) {
+		return repository.findById(username).orElseThrow();
 	}
 
 	@PutMapping("/utenti/{username}")
