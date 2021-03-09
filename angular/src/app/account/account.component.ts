@@ -20,31 +20,14 @@ export class AccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.utente = JSON.parse(localStorage.getItem('utente'));
-    this.http.get<any[]>('http://localhost:8080/utenti/').subscribe((dati) => {
-      // questa funzione viene richiamata dall'http client quando
-
-
-    /*
-    this.utente = new Utente();
-    this.http.get<any[]>('http://localhost:8080/utenti').subscribe((dati) => {
-      this.utenti = dati;  
-      console.log(this.utenti.length)
-      for(var i = 0; i < this.utenti.length; i++) {
-        console.log(this.utenti[i]);
-        
-        if (this.utenti[i].nome == 'nome1') {
-          this.utente = this.utenti[i];
-        }
-        
-       
-      }
-      */
+    this.http.get<Post[]>('http://localhost:8080/posts/').subscribe((dati) => {
+      
+      dati[0].descrizione;
     });
+
+
     
   }
 
-  getUtenti() {
-
-  }
 
 }
