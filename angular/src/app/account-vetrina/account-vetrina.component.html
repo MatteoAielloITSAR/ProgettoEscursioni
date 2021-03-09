@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <h1>Account "UtenteX"</h1>
 
-
+<!--
 <div class="btn btn-secondary" (click)="requestHttp()">Avvia request HTTP</div>
     <table class="table table-hover">
     <thead>
@@ -24,23 +24,24 @@
       </tr>
     </tbody>
   </table>
+  -->
 
 
 
-<!--
-        
+  <!--<div class="btn btn-secondary" (click)="requestHttp()">Avvia request HTTP</div>-->
                     <div    id="info-utente">
-            <div id="username">"username"</div>
-            <div id="nome">"Nome"</div>
-            <div id="cognome">"Cognome"</div>
+            <div id="username">{{utente.username}}</div>
+            <div id="nome">{{utente.nome}}</div>
+            <div id="cognome">{{utente.cognome}}</div>
         </div>
         <br>
        
-        <div id="posts">
+        <div id="posts" *ngFor="let p of utente.post">
             <button id="account-vetrina" type="button" onclick="post1()" routerLink ="/post">
-                <div id="nome-percorso">"nome percorso"</div>
-                <div id="descrizione">"descrizione"</div>
-                <div id="standard-personalizzato">"standardPersonalizzato" </div>
+                <div id="nome-percorso">{{p.nome_percorso}}</div>
+                <div id="descrizione">"{{p.descrizione}}"</div>
+                <div id="standard-personalizzato">"{{p.standard-personalizzato}}" </div>
+                <div id="tipologia-percorso">"{{p.tipologiaPercorso}}"</div>
             </button>
         </div><br>
         <div id="postN" onclick="postN()">
@@ -53,7 +54,7 @@
         </div>
 
   
-        -->
+        
   <!--<div id="post1" onclick="post1()">-->
 
     <!--<td>{{}}</td>-->
