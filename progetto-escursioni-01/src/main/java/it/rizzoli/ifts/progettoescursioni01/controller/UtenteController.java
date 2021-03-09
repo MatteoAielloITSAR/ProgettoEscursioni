@@ -29,7 +29,7 @@ public class UtenteController {
 	}
 
 	@GetMapping("/utenti/{username}")
-	public Utente byUsername(@PathVariable String username) {
+	public Utente byUsername(@PathVariable Integer username) {
 		return repository.findById(username).orElseThrow();
 	}
 
@@ -39,7 +39,7 @@ public class UtenteController {
 	}
 
 	@PutMapping("/utenti/{username}")
-	public Utente aggiorna(@RequestBody Utente utente, @PathVariable String username) {
+	public Utente aggiorna(@RequestBody Utente utente, @PathVariable Integer username) {
 		repository.findById(username).ifPresentOrElse((u) -> {
 			u.setNome(utente.getNome());
 			u.setCognome(utente.getCognome());
@@ -52,7 +52,7 @@ public class UtenteController {
 	}
 	
 	@DeleteMapping("/utenti/{username}")
-	public void elimina(@PathVariable String username) {
+	public void elimina(@PathVariable Integer username) {
 		repository.deleteById(username);	
 	}
 
