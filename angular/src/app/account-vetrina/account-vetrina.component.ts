@@ -18,6 +18,12 @@ export class AccountVetrinaComponent implements OnInit {
   requestHttp() {
     console.log('inizio la richiesta');
 
-    this.http.get<Post[]>('http://localhost:8080/posts').subscribe
+    this.http.get<Post[]>('http://localhost:8080/posts').subscribe((dati) => {
+      console.log(dati);
+      this.posts = dati;
+    });
+
+    console.log('fine');
+    }
   }
-}
+
