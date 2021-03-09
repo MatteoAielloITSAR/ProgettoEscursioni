@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import it.rizzoli.ifts.progettoescursioni01.model.Post;
 import it.rizzoli.ifts.progettoescursioni01.model.Utente;
 import it.rizzoli.ifts.progettoescursioni01.repository.UtenteRepository;
 
@@ -24,34 +23,24 @@ public class UtenteController {
 	@Autowired
 	private UtenteRepository repository;
 	
-	
-	
-	@PostMapping("/utenti/{idUtente}")
-	public Utente inserisciPost(@RequestBody Post post, @PathVariable Integer idUtente) {
-		Utente utente = repository.findById(idUtente).orElseThrow();
-		utente.getPost().add(post);
-		return repository.save(utente);
-	}
-	
 	@GetMapping("/utenti")
 	public List<Utente> all() {
 		return repository.findAll();
 	}
 
+	@GetMapping("/utenti/{id}")
+	public Utente byUsername(@PathVariable Integer id) {
+		return repository.findById(id).orElseThrow();
+	}
 
 	@PostMapping("/utenti")
 	public Utente inserisci(@RequestBody Utente utente) {
 		return repository.save(utente);
 	}
 
-	@GetMapping("/utenti/{username}")
-	public Utente byUsername(@PathVariable Integer username) {
-		return repository.findById(username).orElseThrow();
-	}
-
-	@PutMapping("/utenti/{username}")
-	public Utente aggiorna(@RequestBody Utente utente, @PathVariable Integer username) {
-		repository.findById(username).ifPresentOrElse((u) -> {
+	@PutMapping("/utenti/{id}")
+	public Utente aggiorna(@RequestBody Utente utente, @PathVariable Integer id) {
+		repository.findById(id).ifPresentOrElse((u) -> {
 			u.setNome(utente.getNome());
 			u.setCognome(utente.getCognome());
 			u.setPassword(utente.getPassword());
@@ -59,12 +48,18 @@ public class UtenteController {
 		}, () -> {
 			repository.save(utente);
 			});
-		return repository.findById(username).get();
+		return repository.findById(id).get();
 	}
 	
-	@DeleteMapping("/utenti/{username}")
-	public void elimina(@PathVariable Integer username) {
-		repository.deleteById(username);	
+	@DeleteMapping("/utenti/{id}")
+	public void elimina(@PathVariable Integer id) {
+		repository.deleteById(id);	
+	}
+	
+	@GetMapping("/iscrizioni/{id}")
+	public List<Utente> iscrizioni(@PathVariable Integer id) {
+		Utente u= repository.findById(id).orElseThrow();
+		return u.getIscrizioni();
 	}
 
 }
