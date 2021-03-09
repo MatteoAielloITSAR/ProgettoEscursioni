@@ -10,14 +10,16 @@
         <th scope="col">nome_percorso</th>
         <th scope="col">descrizione</th>
         <th scope="col">standard-personalizzato</th>
+        <th scope="col">tipologiaPercorso</th>
     </tr>
     </thead>
     <tbody>
       <tr *ngFor="let p of posts">
         <th scope="row">{{p.idPost}}</th>
-        <td>{{p.Nome_percorso}</td>
-        <td>{{p.Descrizione}}</td>
+        <td>{{p.nome_percorso}}</td>
+        <td>{{p.descrizione}}</td>
         <td>{{p.standard-personalizzato}}</td>
+        <td>{{p.tipologiaPercorso}}</td>
         
       </tr>
     </tbody>
