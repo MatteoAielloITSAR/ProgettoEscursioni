@@ -20,9 +20,9 @@ export class AccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.utente = JSON.parse(localStorage.getItem('utente'));
-    this.http.get<Post[]>('http://localhost:8080/posts/').subscribe((dati) => {
-      
-      dati[0].descrizione;
+    
+    this.http.get<any[]>('http://localhost:8080/posts/').subscribe((dati) => {
+      this.posts = dati;
     });
 
 
