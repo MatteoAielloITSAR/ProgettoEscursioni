@@ -11,6 +11,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AccountVetrinaComponent } from './account-vetrina/account-vetrina.component';
 import { ListaUtentiComponent } from './lista-utenti/lista-utenti.component';
 import { PostComponent } from './post/post.component';
+import { CreazionePostComponent } from './creazione-post/creazione-post.component';
 
 
 const routes: Routes =  [
@@ -57,6 +58,10 @@ const routes: Routes =  [
   
   { path: 'post',
     component: PostComponent
+  },
+  
+  { path: 'creazione-post',
+    component: CreazionePostComponent
   },
   {
     path: '',
