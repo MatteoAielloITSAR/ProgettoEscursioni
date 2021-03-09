@@ -12,4 +12,8 @@ export class CreazionePostComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  creaPost() {
+    console.log('prova');
+  }
+
 }

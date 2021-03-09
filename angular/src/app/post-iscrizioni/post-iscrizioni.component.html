@@ -1,13 +1,15 @@
 <app-menu></app-menu>
 <h1>Gli ultimi post delle tue iscrizioni</h1>
 <div id="posts" class="container-fluid">
-    <div *ngFor="let post of postIscr">
-        <button id="utente-vetrina" type="button" routerLink = "/post">
-            <div id="username">{{post.no}}</div>
-            <div id="nome-percorso">{{post.nome-percorso}}</div>
-            <div id="descrizione">{{post.descrizione}}</div>
-            <div id="standard-personalizzato">{{post.tipologiaPercorso}}</div>
-        </button>
+    <div *ngFor="let ut of postIscr">
+        <div *ngFor="let p of ut.post">
+            <button id="utente-vetrina" type="button" routerLink = "/post">
+                <div id="username">{{ut.username}}</div>
+                <div id="nome-percorso">{{p.nome_percorso}}</div>
+                <div id="descrizione">{{p.descrizione}}</div>
+                <div id="standard-personalizzato">{{p.tipologiaPercorso}}</div>
+            </button>
+        </div>
     </div>
         
 </div>
