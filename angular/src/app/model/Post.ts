@@ -1,3 +1,5 @@
+import { Utente } from "./utente";
+
 export class Post {
     idPost: number;
     nome_percorso : string;
@@ -5,4 +7,5 @@ export class Post {
     difficolta : string;
     visibilita : string;
     tipologiaPercorso: string;
+    utente : any;
 } 
