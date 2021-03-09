@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
   id:number;
 
   constructor() {
-    if(localStorage.getItem('utente').length==0){
+    if(localStorage.getItem('utente')==null){
       window.location.href="/login";
     }
    }
