@@ -25,7 +25,7 @@ export class CreazionePostComponent implements OnInit {
     alert("Tutto il form: " + JSON.stringify(form.value));
   }
 
-  creaPost(nome, descrizione) {
+  creaPost(nome, descrizione, difficolta) {
 
     // let difficolta : number;
 
@@ -34,14 +34,12 @@ export class CreazionePostComponent implements OnInit {
     let post : Post = new Post();
     post.nome_percorso = nome;
     post.descrizione = descrizione;
-    post.difficolta = 2;
-    post.visibilita = "privato";
-    post.tipologiaPercorso = "standard";
+    post.difficolta = difficolta;
+    post.visibilita = "pubblico";
+    post.tipologiaPercorso = "personalizzato";
     post.utente = this.utente;
 
-    console.log(post.nome_percorso + " " + post.descrizione)
-
-    // this.http.post<Utente>('http://localhost:8080/utenti/' + this.utente.idUtente, post).subscribe();
+    this.http.post<Utente>('http://localhost:8080/utenti/' + this.utente.idUtente, post).subscribe();
   }
 
   /*

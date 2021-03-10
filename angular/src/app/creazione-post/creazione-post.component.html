@@ -7,28 +7,9 @@
 <label>Descrizione</label>
 <input #descrizione><br>
 
-<button (click)="creaPost(nome.value, descrizione.value)">crea post</button>
+<label>Difficolta</label>
+<input #difficolta><br>
 
-
-<!--
-
-<input type="radio" name="difficolta" value="1" #difficolta>facile<br>
-<input type="radio" name="difficolta" value="2" #difficolta>media<br>
-<input type="radio" name="difficolta" value="3" #difficolta>difficile<br>
 <button (click)="creaPost(nome.value, descrizione.value, difficolta.value)">crea post</button>
 
--->
 
-
-<!--
-<form #mioform="ngForm" (ngSubmit)="invio(mioform.value)">
-    <label for="cat">Maschio o Femmina</label>
-    <div *ngFor="let genere of sesso">
-        <input type="radio" name="hobby" value="{{genere.valore}}" [(ngModel)]="sesso_modello">
-            {{genere.nome}}
-        </input>
-    </div>
-    <button type="submit">Invia</button>
-</form>
--->
-<br><br><br>
