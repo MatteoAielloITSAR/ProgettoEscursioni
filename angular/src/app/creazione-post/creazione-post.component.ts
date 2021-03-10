@@ -40,6 +40,8 @@ export class CreazionePostComponent implements OnInit {
     post.utente = this.utente;
 
     this.http.post<Utente>('http://localhost:8080/utenti/' + this.utente.idUtente, post).subscribe();
+    window.location.href="/account";
+
   }
 
   /*
