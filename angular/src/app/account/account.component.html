@@ -8,7 +8,7 @@
 </p>
 
 <p *ngFor="let p of utente.post">
-    <button routerLink = "/post">
+    <button (click)="visualizzaPost(nome_percorso.value,descrizione.value,visibilita.value,tipologiaPercorso.value) routerLink = "/post">
         <strong>{{p.nome_percorso}}</strong><br>
         {{p.descrizione}}<br>
         {{p.visibilita}}<br>

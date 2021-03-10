@@ -13,11 +13,18 @@ export class AccountComponent implements OnInit {
 
   utente : Utente;
   posts : Post[];
-
+  pt:Post=null;
   constructor(
     private http: HttpClient
   ) { }
 
+
+
+  visualizzaPost(nome,desc,visi,tipo,){
+    
+  localStorage.setItem('post', JSON.stringify(this.pt));
+        window.location.href="/menu";
+  }
   ngOnInit(): void {
 
     
