@@ -19,7 +19,7 @@ export class IscrizioniComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.http.get<any[]>('http://localhost:8080/utenti/'+this.iscrizioni).subscribe(((dati) =>{
+    this.http.get<any[]>('http://localhost:8080/utenti/'+this.ut.idUtente).subscribe(((dati) =>{
       this.iscrizioni=dati
     }));
   }
