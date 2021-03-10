@@ -7,5 +7,5 @@ export class Post {
     difficolta : number;
     visibilita : string;
     tipologiaPercorso: string;
-    utente : any;
+    utente : Utente;
 } 

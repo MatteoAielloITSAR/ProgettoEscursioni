@@ -31,9 +31,10 @@ public class UtenteController {
 	
 	@PostMapping("/utenti/{id}")
 	public void inserisciPost(@RequestBody Post post, @PathVariable Integer id) {
-		
 		Utente utente = repository.findById(id).orElseThrow();
-		utente.getPost().add(postRepository.save(post));
+		Post p = postRepository.save(post);
+		utente.getPost().add(p);
+		repository.save(utente);
 	}
 	
 	
