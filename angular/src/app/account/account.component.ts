@@ -19,12 +19,36 @@ export class AccountComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
+    
     this.utente = JSON.parse(localStorage.getItem('utente'));
     // console.log(localStorage.getItem('utente'))
     console.log(JSON.stringify(this.utente.post));
     
-
     /*
+    visualizzaPost(){
+      this.http.get<any[]>('http://localhost:8080/utenti/').subscribe((dati) => {
+        // questa funzione viene richiamata dall'http client quando
+        // la richiesta al web server si è completata
+        this.utenti = dati;
+        for(let i=0;i< this.utenti.length;i++){
+          if(this.utenti[i].username==user&&this.utenti[i].password==pass){
+            this.ut=this.utenti[i];
+          }
+        }
+        if(this.ut==null){
+        
+        }
+        else{
+          localStorage.setItem('utente', JSON.stringify(this.ut));
+          window.location.href="/menu";
+        }
+    */
+        //this.http.put<Utente>('http://localhost:4200/post', body).subscribe((dati) => 
+          
+        //this.http.put<any>('http:localhost:4200/post').subscribe((dati) =>
+    
+  /*
     this.http.get<Post[]>('http://localhost:8080/posts/').subscribe((dati) => {
       for (let i = 0; i < dati.length; i++) {
         let post = dati[i];
