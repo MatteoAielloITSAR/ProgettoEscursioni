@@ -26,7 +26,7 @@ public class Post {
 	@Column(nullable = false,length = 500)
 	private String descrizione;
 	
-	@Column(length = 10,nullable = false)
+	@Column(nullable = false, length = 10)
 	private Integer difficolta;
 	
 	@Column(nullable = false, length = 10)

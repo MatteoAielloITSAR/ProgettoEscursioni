@@ -4,7 +4,7 @@ export class Post {
     idPost: number;
     nome_percorso : string;
     descrizione: string;
-    difficolta : string;
+    difficolta : number;
     visibilita : string;
     tipologiaPercorso: string;
     utente : any;

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import it.rizzoli.ifts.progettoescursioni01.model.Post;
 import it.rizzoli.ifts.progettoescursioni01.model.Utente;
+import it.rizzoli.ifts.progettoescursioni01.repository.PostRepository;
 import it.rizzoli.ifts.progettoescursioni01.repository.UtenteRepository;
 
 @CrossOrigin(origins = "*")
@@ -24,11 +25,15 @@ public class UtenteController {
 	@Autowired
 	private UtenteRepository repository;
 	
+	@Autowired
+	private PostRepository postRepository;
+	
+	
 	@PostMapping("/utenti/{id}")
-	public Utente inserisciPost(@RequestBody Post post, @PathVariable Integer id) {
+	public void inserisciPost(@RequestBody Post post, @PathVariable Integer id) {
+		
 		Utente utente = repository.findById(id).orElseThrow();
-		utente.getPost().add(post);
-		return repository.save(utente);
+		utente.getPost().add(postRepository.save(post));
 	}
 	
 	
