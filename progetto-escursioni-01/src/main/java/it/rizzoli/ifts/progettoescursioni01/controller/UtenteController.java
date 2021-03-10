@@ -29,11 +29,20 @@ public class UtenteController {
 	private PostRepository postRepository;
 	
 	
+	
+	
 	@PostMapping("/utenti/{id}")
 	public void inserisciPost(@RequestBody Post post, @PathVariable Integer id) {
+		
+		
+		
 		Utente utente = repository.findById(id).orElseThrow();
 		Post p = postRepository.save(post);
+		p.setUtente(utente);
 		utente.getPost().add(p);
+		// System.out.println(p.getUtente().getIdUtente());
+		System.out.println(p.getUtente());
+		postRepository.save(p);
 		repository.save(utente);
 	}
 	

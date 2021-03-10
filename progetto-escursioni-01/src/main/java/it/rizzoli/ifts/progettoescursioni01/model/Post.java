@@ -57,6 +57,16 @@ public class Post {
 	private List<Attrezzatura> attrezzature;
 	
 	
+	
+	
+
+	public Utente getUtente() {
+		return utente;
+	}
+
+	public void setUtente(Utente utente) {
+		this.utente = utente;
+	}
 
 	public Integer getIdPost() {
 		return idPost;

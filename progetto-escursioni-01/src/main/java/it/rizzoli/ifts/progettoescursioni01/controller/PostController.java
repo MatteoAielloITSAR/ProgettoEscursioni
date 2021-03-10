@@ -49,7 +49,7 @@ public class PostController {
 			repository.save(p);
 		}, () -> {
 			repository.save(post);
-			});
+		});
 		return repository.findById(idPost).get();
 	}
 	

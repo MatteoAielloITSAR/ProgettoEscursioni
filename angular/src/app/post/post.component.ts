@@ -3,11 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { Utente } from '../model/utente';
 import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Post } from '../model/Post';
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
+
 export class PostComponent implements OnInit {
   utente : Utente;
   posts: Post[];
