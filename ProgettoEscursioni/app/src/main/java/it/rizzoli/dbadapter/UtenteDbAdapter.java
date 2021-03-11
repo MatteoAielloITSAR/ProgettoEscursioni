@@ -31,7 +31,6 @@ public class UtenteDbAdapter {
         ContentValues values = new ContentValues();
         values.put(UTENTE_NAME_KEY, user.getNome());
         values.put(UTENTE_SURNAME_KEY, user.getCognome());
-        values.put(UTENTE_AGE_KEY, user.getEta());
         values.put(UTENTE_USERNAME_KEY, user.getUsername());
         values.put(UTENTE_PASSWORD_KEY, user.getPassword());
 
