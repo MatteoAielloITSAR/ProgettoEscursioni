@@ -19,8 +19,6 @@ public class LoginActivity extends AppCompatActivity {
 
         EditText etUsername = findViewById(R.id.etUsername);
         EditText etPassword = findViewById(R.id.etPassword);
-        TextView twUsername = findViewById(R.id.twUsername);
-        TextView twPassword = findViewById(R.id.twPassword);
         Button btnRegistrati = findViewById(R.id.btnRegistrati);
         Button btnRecuperaPassword = findViewById(R.id.btnRecuperaPassword);
         Button btnAccedi = findViewById(R.id.btnAccedi);
@@ -46,6 +44,16 @@ public class LoginActivity extends AppCompatActivity {
         btnAccedi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String username=etUsername.getText().toString();
+                String password=etPassword.getText().toString();
+                if(username.length()<=0 || password.length()<=0){
+                    Toast.makeText(LoginActivity.this, "Username o Password errati", Toast.LENGTH_SHORT).show();
+                }else{
+
+                }
+
+
+
                 Toast.makeText(LoginActivity.this, "btnAccedi", Toast.LENGTH_SHORT).show();
                 Intent accediIntent=new Intent(LoginActivity.this, AccountActivity.class);
                 startActivity(accediIntent);
