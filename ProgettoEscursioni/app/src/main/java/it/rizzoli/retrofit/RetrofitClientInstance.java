@@ -2,6 +2,7 @@ package it.rizzoli.retrofit;
 
 import android.app.Application;
 
+import it.rizzoli.interfaceDB.UtenteInterface;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -12,6 +13,11 @@ public class RetrofitClientInstance extends Application {
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build();
+
+    public UtenteInterface getUtenteInterface() {
+        UtenteInterface ui = retrofit.create(UtenteInterface.class);
+        return ui;
+    }
 }
 
 
