@@ -53,13 +53,12 @@ const routes: Routes =  [
     component: AccountVetrinaComponent
   },
   {
-<<<<<<< HEAD
     path: 'utenti',
     component: ListaUtentiComponent
-=======
+  },
+  {
     path: 'post',
     component: PostComponent
->>>>>>> ef69bbb949e9c70f5bd3ddcdcbf3e12ae2409c64
   },
   {
     path: '',
@@ -73,13 +72,7 @@ const routes: Routes =  [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-<<<<<<< HEAD
 export const routingComponents = [PostIscrizioniComponent, AccountComponent, 
   AccountVetrinaComponent, RicercaPostComponent, RegistrazioneComponent, 
   LoginComponent, MenuComponent, PuntoComponent, ToolbarComponent,
-ListaUtentiComponent]
-=======
-export const routingComponents = [PostIscrizioniComponent, AccountComponent, AccountVetrinaComponent, PostComponent, 
-  RicercaPostComponent, LoginComponent, RegistrazioneComponent, 
-  MenuComponent, PuntoComponent, ToolbarComponent]
->>>>>>> ef69bbb949e9c70f5bd3ddcdcbf3e12ae2409c64
+  PostComponent, ListaUtentiComponent]
