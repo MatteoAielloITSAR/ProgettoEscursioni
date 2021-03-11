@@ -10,6 +10,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
+import it.rizzoli.interfaceDB.UtenteInterface;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
@@ -55,8 +62,29 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
 
+                /*
+                UtenteInterface i = (new ClasseCondivisa()).initRetrofit();
+                Call<List<Utente>> call = i.userList();
 
 
+                call.enqueue(new Callback<List<Utente>>() {
+                    @Override
+                    public void onResponse(Call<List<Utente>> call, Response<List<Utente>> response) {
+
+                        listaUtente = response.body();
+                        if (listaUtente.size() > 0) {
+                            Toast.makeText(MainActivity.this, listaUtente.get(0).getNome(), Toast.LENGTH_LONG).show();
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<Utente>> call, Throwable t) {
+
+                    }
+                });
+
+                 */
                 Toast.makeText(LoginActivity.this, "btnAccedi", Toast.LENGTH_SHORT).show();
                 Intent accediIntent=new Intent(LoginActivity.this, AccountActivity.class);
                 startActivity(accediIntent);
