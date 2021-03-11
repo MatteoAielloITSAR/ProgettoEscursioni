@@ -12,6 +12,10 @@ public class RetrofitClientInstance extends Application {
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build();
-
-
+<<<<<<< HEAD
+=======
 }
+
+>>>>>>> 346d3a0e518bbc703ceaed03769d67bb083b5347
+
+
