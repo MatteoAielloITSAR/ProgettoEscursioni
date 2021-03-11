@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import it.rizzoli.ifts.progettoescursioni01.model.Post;
 import it.rizzoli.ifts.progettoescursioni01.model.Utente;
+import it.rizzoli.ifts.progettoescursioni01.repository.PostRepository;
 import it.rizzoli.ifts.progettoescursioni01.repository.UtenteRepository;
 
 @CrossOrigin(origins = "*")
@@ -23,14 +25,36 @@ public class UtenteController {
 	@Autowired
 	private UtenteRepository repository;
 	
+	@Autowired
+	private PostRepository postRepository;
+	
+	
+	
+	
+	@PostMapping("/utenti/{id}")
+	public void inserisciPost(@RequestBody Post post, @PathVariable Integer id) {
+		
+		
+		
+		Utente utente = repository.findById(id).orElseThrow();
+		Post p = postRepository.save(post);
+		p.setUtente(utente);
+		utente.getPost().add(p);
+		// System.out.println(p.getUtente().getIdUtente());
+		System.out.println(p.getUtente());
+		postRepository.save(p);
+		repository.save(utente);
+	}
+	
+	
 	@GetMapping("/utenti")
 	public List<Utente> all() {
 		return repository.findAll();
 	}
 
-	@GetMapping("/utenti/{username}")
-	public Utente byUsername(@PathVariable String username) {
-		return repository.findById(username).orElseThrow();
+	@GetMapping("/utenti/{id}")
+	public Utente byUsername(@PathVariable Integer id) {
+		return repository.findById(id).orElseThrow();
 	}
 
 	@PostMapping("/utenti")
@@ -38,9 +62,9 @@ public class UtenteController {
 		return repository.save(utente);
 	}
 
-	@PutMapping("/utenti/{username}")
-	public Utente aggiorna(@RequestBody Utente utente, @PathVariable String username) {
-		repository.findById(username).ifPresentOrElse((u) -> {
+	@PutMapping("/utenti/{id}")
+	public Utente aggiorna(@RequestBody Utente utente, @PathVariable Integer id) {
+		repository.findById(id).ifPresentOrElse((u) -> {
 			u.setNome(utente.getNome());
 			u.setCognome(utente.getCognome());
 			u.setPassword(utente.getPassword());
@@ -48,12 +72,18 @@ public class UtenteController {
 		}, () -> {
 			repository.save(utente);
 			});
-		return repository.findById(username).get();
+		return repository.findById(id).get();
 	}
 	
-	@DeleteMapping("/utenti/{username}")
-	public void elimina(@PathVariable String username) {
-		repository.deleteById(username);	
+	@DeleteMapping("/utenti/{id}")
+	public void elimina(@PathVariable Integer id) {
+		repository.deleteById(id);	
+	}
+	
+	@GetMapping("/iscrizioni/{id}")
+	public List<Utente> iscrizioni(@PathVariable Integer id) {
+		Utente u= repository.findById(id).orElseThrow();
+		return u.getIscrizioni();
 	}
 
 }

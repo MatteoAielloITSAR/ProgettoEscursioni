@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         alert("Username o Password errati");
       }
       else{
-        localStorage.setItem('utente',JSON.stringify(this.ut));
+        localStorage.setItem('utente', JSON.stringify(this.ut));
         window.location.href="/menu";
       }
     });

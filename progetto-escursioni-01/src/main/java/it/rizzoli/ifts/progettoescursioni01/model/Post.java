@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -26,7 +27,7 @@ public class Post {
 	@Column(nullable = false,length = 500)
 	private String descrizione;
 	
-	@Column(length = 10,nullable = false)
+	@Column(nullable = false, length = 10)
 	private Integer difficolta;
 	
 	@Column(nullable = false, length = 10)
@@ -35,8 +36,12 @@ public class Post {
 	@Column(nullable = false, length = 20)
 	private String tipologiaPercorso;
 	
+	
+	
+	
 	@JsonIgnore
 	@ManyToOne
+	@JoinColumn(name = "utente_idUtente")
 	private Utente utente;
 	
 	@OneToMany(mappedBy = "post")
@@ -52,6 +57,16 @@ public class Post {
 	private List<Attrezzatura> attrezzature;
 	
 	
+	
+	
+
+	public Utente getUtente() {
+		return utente;
+	}
+
+	public void setUtente(Utente utente) {
+		this.utente = utente;
+	}
 
 	public Integer getIdPost() {
 		return idPost;

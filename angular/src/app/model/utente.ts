@@ -4,4 +4,5 @@ export class Utente{
     password:string;
     nome:string;
     cognome:string;
+    post : any[];
 }

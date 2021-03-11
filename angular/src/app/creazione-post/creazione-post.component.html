@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<h1>Creazione post</h1>
+
+<label>Nome percorso</label>
+<input #nome><br>
+
+<label>Descrizione</label>
+<input #descrizione><br>
+
+<label>Difficolta</label>
+<input #difficolta><br>
+
+<button (click)="creaPost(nome.value, descrizione.value, difficolta.value)">crea post</button>
+
+
