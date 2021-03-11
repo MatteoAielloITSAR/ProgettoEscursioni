@@ -10,14 +10,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import it.rizzoli.interfaceDB.UtenteInterface;
+import it.rizzoli.model.Utente;
+import it.rizzoli.retrofit.RetrofitClientInstance;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
+    List<Utente>listaUtente = new ArrayList<Utente>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,9 +67,9 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
 
-                /*
-                UtenteInterface i = (new ClasseCondivisa()).initRetrofit();
-                Call<List<Utente>> call = i.userList();
+
+                UtenteInterface ui = (new RetrofitClientInstance()).getUtenteInterface();
+                Call<List<Utente>> call = ui.all();
 
 
                 call.enqueue(new Callback<List<Utente>>() {
@@ -73,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         listaUtente = response.body();
                         if (listaUtente.size() > 0) {
-                            Toast.makeText(MainActivity.this, listaUtente.get(0).getNome(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, listaUtente.get(0).getNome(), Toast.LENGTH_LONG).show();
 
                         }
                     }
@@ -84,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 
-                 */
+
                 Toast.makeText(LoginActivity.this, "btnAccedi", Toast.LENGTH_SHORT).show();
                 Intent accediIntent=new Intent(LoginActivity.this, AccountActivity.class);
                 startActivity(accediIntent);

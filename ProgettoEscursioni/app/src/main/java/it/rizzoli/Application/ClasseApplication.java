@@ -6,7 +6,7 @@ import it.rizzoli.model.Utente;
 
 
 public class ClasseApplication extends Application {
-    private Utente utente = new Utente();
+    private Utente utente = new Utente("prova");
 
 
 

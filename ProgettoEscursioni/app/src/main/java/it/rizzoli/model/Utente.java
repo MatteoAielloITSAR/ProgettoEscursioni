@@ -7,6 +7,15 @@ public class Utente {
     private String username;
     private String password;
 
+    public Utente(String user){
+        username=user;
+
+    }
+
+    public Utente() {
+
+    }
+
     public int getId() {
         return id;
     }
