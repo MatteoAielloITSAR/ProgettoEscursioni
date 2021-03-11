@@ -27,6 +27,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(LoginActivity.this, "btnRegistrati", Toast.LENGTH_SHORT).show();
+
+
                 Intent registratiIntent=new Intent(LoginActivity.this,RegistrazioneUtenteActivity.class);
                 startActivity(registratiIntent);
             }
@@ -46,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username=etUsername.getText().toString();
                 String password=etPassword.getText().toString();
+
                 if(username.length()<=0 || password.length()<=0){
                     Toast.makeText(LoginActivity.this, "Username o Password errati", Toast.LENGTH_SHORT).show();
                 }else{
