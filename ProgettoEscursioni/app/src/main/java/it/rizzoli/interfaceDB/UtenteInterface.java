@@ -1,4 +1,4 @@
-package it.rizzoli.progettoescursioni;
+package it.rizzoli.interfaceDB;
 
 
 import java.util.List;
