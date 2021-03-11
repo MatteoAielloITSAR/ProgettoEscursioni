@@ -1,4 +1,5 @@
-package it.rizzoli;
+package it.rizzoli.progettoescursioni;
+
 
 import java.util.List;
 
