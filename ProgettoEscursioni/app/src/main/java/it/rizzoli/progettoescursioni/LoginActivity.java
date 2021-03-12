@@ -58,29 +58,35 @@ public class LoginActivity extends AppCompatActivity {
         btnAccedi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username=etUsername.getText().toString();
-                String password=etPassword.getText().toString();
-
-                if(username.length()<=0 || password.length()<=0){
-                    Toast.makeText(LoginActivity.this, "Username o Password errati", Toast.LENGTH_SHORT).show();
-                }else{
-
-                }
+                String username = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
 
 
-                UtenteInterface ui = (new RetrofitClientInstance()).getUtenteInterface();
+
+                RetrofitClientInstance rf = new RetrofitClientInstance();
+                UtenteInterface ui = rf.getUtenteInterface();
                 Call<List<Utente>> call = ui.all();
-
 
                 call.enqueue(new Callback<List<Utente>>() {
                     @Override
                     public void onResponse(Call<List<Utente>> call, Response<List<Utente>> response) {
 
                         listaUtente = response.body();
-                        if (listaUtente.size() > 0) {
-                            Toast.makeText(LoginActivity.this, listaUtente.get(0).getNome(), Toast.LENGTH_LONG).show();
+                        boolean utenteTrovato = false;
 
+                        for (Utente u : listaUtente) {
+                            if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
+                                Toast.makeText(LoginActivity.this, "utente trovatooo", Toast.LENGTH_LONG).show();
+                                utenteTrovato = true;
+                                break;
+                            }
                         }
+
+                        if (!utenteTrovato) {
+                            Toast.makeText(LoginActivity.this, "utente non trovato", Toast.LENGTH_LONG).show();
+                        }
+
+
                     }
 
                     @Override
@@ -89,10 +95,33 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 
+                //Call<Utente> call = ui.byId(11);
 
-                Toast.makeText(LoginActivity.this, "btnAccedi", Toast.LENGTH_SHORT).show();
-                Intent accediIntent=new Intent(LoginActivity.this, AccountActivity.class);
-                startActivity(accediIntent);
+                /*
+                call.enqueue(new Callback<Utente>() {
+                    @Override
+                    public void onResponse(Call<Utente> call, Response<Utente> response) {
+                        Utente u = response.body();
+
+                        if (u == null) {
+                            Toast.makeText(LoginActivity.this, "credenziali errate", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this, u.toString(), Toast.LENGTH_LONG).show();
+                        }
+
+                        // Intent accediIntent=new Intent(LoginActivity.this, AccountActivity.class);
+                        // startActivity(accediIntent);
+                    }
+
+                    @Override
+                    public void onFailure(Call<Utente> call, Throwable t) {
+
+                    }
+                });
+                 */
+
+
+
             }
         });
         
