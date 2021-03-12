@@ -14,13 +14,13 @@ import retrofit2.http.Path;
 
 public interface UtenteInterface {
 
-    @GET()
+    @GET("/utenti")
     Call<List<Utente>> all();
 
     @GET("/utenti/{id}")
     Call<Utente> byId(@Path("id") Integer id);
 
-    @POST("/utente")
+    @POST("/utenti")
     Call<Utente> inserisci(@Body Utente utente);
 
     @POST("/utenti/{id}")
