@@ -6,45 +6,83 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
+
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import java.util.List;
 
+import it.rizzoli.interfaceDB.PostInterface;
+import it.rizzoli.interfaceDB.UtenteInterface;
 import it.rizzoli.listadapter.PostListAdapter;
 import it.rizzoli.model.Post;
 import it.rizzoli.model.Utente;
 import it.rizzoli.model.UtentePost;
+import it.rizzoli.retrofit.RetrofitClientInstance;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class SearchPostActivity extends AppCompatActivity {
 
+    List<Utente> lu;
+    List<Post> lp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_post);
         TextView searchPost= findViewById(R.id.searchPost);
-        EditText editTextRicerca = findViewById(R.id.editTextRicerca);
-        Button buttonSearch = findViewById(R.id.buttonSearch);
+        /*EditText editTextRicerca = findViewById(R.id.editTextRicerca);
+        Button buttonSearch = findViewById(R.id.buttonSearch);*/
 
-        ArrayList<UtentePost> listaPost = new ArrayList<>();
-        listaPost.add(new UtentePost(new Utente(),new Post("Monte Bianco", "qwerty", 0, "", "a")));
-        listaPost.add(new UtentePost(new Utente(),new Post("Monte Rosa", "ytrewq", 1, "", "c")));
+        RetrofitClientInstance r=new RetrofitClientInstance();
+
+        UtenteInterface u=r.getUtenteInterface();
+        Call<List<Utente>> listaUtenti=u.all();
+        listaUtenti.enqueue(new Callback<List<Utente>>() {
+            @Override
+            public void onResponse(Call<List<Utente>> call, Response<List<Utente>> response) {
+                lu=response.body();
+            }
+
+            @Override
+            public void onFailure(Call<List<Utente>> call, Throwable t) {
+
+            }
+        });
+        PostInterface p=r.getPostInterface();
+        Call<List<Post>> listaPost=p.all();
+        listaPost.enqueue(new Callback<List<Post>>() {
+            @Override
+            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
+                lp=response.body();
+            }
+
+            @Override
+            public void onFailure(Call<List<Post>> call, Throwable t) {
+
+            }
+        });
+        for (int i=lp.size();i>0;i--){
+
+        }
+
         PostListAdapter postListAdapter = new PostListAdapter(this, R.layout.list_post, listaPost);
         ListView ricercapostListView = findViewById(R.id.ricercapostListView);
         ricercapostListView.setAdapter(postListAdapter);
 
 
 
-        buttonSearch.setOnClickListener(new View.OnClickListener() {
+       /* buttonSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(SearchPostActivity.this, "Stai cercando", Toast.LENGTH_LONG).show();
+                String ricerca=editTextRicerca.getText().toString();
             }
 
-        });
+        });*/
 
         ricercapostListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
