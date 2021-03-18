@@ -15,23 +15,43 @@ import java.util.List;
 import it.rizzoli.interfaceDB.UtenteInterface;
 import it.rizzoli.listadapter.IscrizioniListAdapter;
 import it.rizzoli.model.Utente;
+import it.rizzoli.model.UtentePost;
 import it.rizzoli.retrofit.RetrofitClientInstance;
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class IscrizioniActivity extends AppCompatActivity {
-
+    IscrizioniListAdapter iscrizioniListAdapter;
+    List<Utente> list=new ArrayList<Utente>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iscrizioni);
 
-        ArrayList<Utente> list=new ArrayList<>();
-        list.add(new Utente("pippo"));
-        list.add(new Utente("pluto"));
-
-        IscrizioniListAdapter iscrizioniListAdapter=new IscrizioniListAdapter(this,R.layout.list_account,list);
         ListView iscrizioniListView = findViewById(R.id.iscrizioniListView);
-        iscrizioniListView.setAdapter(iscrizioniListAdapter);
+        //list.add(new Utente("pippo"));
+        //list.add(new Utente("pluto"));
+
+
+
+        UtenteInterface ui = (new RetrofitClientInstance()).getUtenteInterface();
+        Call<List<Utente>> call = ui.all();
+        call.enqueue(new Callback<List<Utente>>() {
+            @Override
+            public void onResponse(Call<List<Utente>> call, Response<List<Utente>> response) {
+                list = response.body();
+                Toast.makeText(IscrizioniActivity.this, list.get(0).getNome(),Toast.LENGTH_LONG).show();
+                iscrizioniListAdapter =new IscrizioniListAdapter(IscrizioniActivity.this,R.layout.list_account,(ArrayList)list);
+
+                iscrizioniListView.setAdapter(iscrizioniListAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<Utente>> call, Throwable t) {
+
+            }
+        });
 
         iscrizioniListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -44,10 +64,11 @@ public class IscrizioniActivity extends AppCompatActivity {
                 accountVetrinaIntent.putExtra("UTENTE", ut.getId());
                 startActivity(accountVetrinaIntent );
 
-                UtenteInterface ui = (new RetrofitClientInstance()).getUtenteInterface();
-                Call<List<Utente>> call = ui.all();
+
             }
         });
-  
+
     }
+
+
 }
