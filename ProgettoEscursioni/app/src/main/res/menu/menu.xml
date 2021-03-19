@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/account" android:title="account" />
+    <item android:id="@+id/crea" android:title="crea" />
+    <item android:id="@+id/iscrizioni" android:title="iscrizioni" />
+    <item android:id="@+id/ricerca" android:title="ricerca" />
+</menu>
