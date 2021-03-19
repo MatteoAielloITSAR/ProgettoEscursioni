@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -26,6 +29,38 @@ import retrofit2.Response;
 
 
 public class SearchPostActivity extends AppCompatActivity {
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mi = getMenuInflater();
+        mi.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id) {
+            case R.id.account:
+                Intent accountActivity = new Intent(SearchPostActivity.this, AccountActivity.class);
+                startActivity(accountActivity);
+                break;
+            case R.id.crea:
+                Intent creaPercorsoActivity = new Intent(SearchPostActivity.this, CreazionePostActivity.class);
+                startActivity(creaPercorsoActivity);
+                break;
+            case R.id.iscrizioni:
+                Intent iscrizioniActivity = new Intent(SearchPostActivity.this, PostIscrizioniActivity.class);
+                startActivity(iscrizioniActivity);
+                break;
+            case R.id.ricerca:
+                Intent ricercaActivity = new Intent(SearchPostActivity.this, SearchPostActivity.class);
+                startActivity(ricercaActivity);
+                break;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     List<Utente> lu;
     List<Post> lp;
