@@ -76,11 +76,15 @@ public class LoginActivity extends AppCompatActivity {
 
                         for (Utente u : listaUtente) {
                             if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
-                                Toast.makeText(LoginActivity.this, "utente trovatooo", Toast.LENGTH_LONG).show();
+
+                                Intent accediIntent = new Intent(LoginActivity.this, AccountActivity.class);
+                                startActivity(accediIntent);
+
                                 utenteTrovato = true;
                                 break;
                             }
                         }
+
 
                         if (!utenteTrovato) {
                             Toast.makeText(LoginActivity.this, "utente non trovato", Toast.LENGTH_LONG).show();

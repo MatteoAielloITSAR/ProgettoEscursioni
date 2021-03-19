@@ -52,6 +52,7 @@ public class SearchPostActivity extends AppCompatActivity {
 
             }
         });
+        /*
         PostInterface p=r.getPostInterface();
         Call<List<Post>> listaPost=p.all();
         listaPost.enqueue(new Callback<List<Post>>() {
@@ -73,6 +74,8 @@ public class SearchPostActivity extends AppCompatActivity {
         ListView ricercapostListView = findViewById(R.id.ricercapostListView);
         ricercapostListView.setAdapter(postListAdapter);
 
+         */
+
 
 
        /* buttonSearch.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +86,8 @@ public class SearchPostActivity extends AppCompatActivity {
             }
 
         });*/
+
+        /*
 
         ricercapostListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -100,5 +105,7 @@ public class SearchPostActivity extends AppCompatActivity {
 
             }
         });
+
+         */
     }
 }

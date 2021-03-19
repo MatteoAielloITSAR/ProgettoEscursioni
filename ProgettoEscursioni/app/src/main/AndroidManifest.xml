@@ -12,7 +12,9 @@
         android:theme="@style/Theme.ProgettoEscursioni">
         <activity android:name=".SceltaPercorso"></activity>
         <activity android:name=".AccountVetrina"/>
-        <activity android:name=".IscrizioniActivity"/>
+        <activity android:name=".IscrizioniActivity">
+
+        </activity>
         <activity android:name=".PostIscrizioniActivity" />
         <activity android:name=".CreazionePostActivity" />
         <activity android:name=".PostActivity" />
