@@ -16,19 +16,19 @@
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="username" />
+            android:text="mariorossi" />
 
         <TextView
             android:id="@+id/nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="nome" />
+            android:text="Mario" />
 
         <TextView
             android:id="@+id/cognome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="cognome" />
+            android:text="Rossi" />
     </LinearLayout>
 
     <ListView

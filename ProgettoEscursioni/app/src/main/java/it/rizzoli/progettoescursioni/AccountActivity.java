@@ -62,8 +62,8 @@ public class AccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account);
 
         ArrayList<UtentePost> listaPostAcc = new ArrayList<>();
-        listaPostAcc.add(new UtentePost(new Utente(),new Post("pippo", "asd", 0,"","a")));
-        listaPostAcc.add(new UtentePost(new Utente(),new Post("pluto", "asad", 0,"","s")));
+        listaPostAcc.add(new UtentePost(new Utente("mariorossi"),new Post("Baita della volpe, Monte Bianco", "Partenza da Baita Trecime, seguire il percorso 503 e 512", 1,"tutti","personalizzato")));
+        listaPostAcc.add(new UtentePost(new Utente("mariorossi"),new Post("Cima Monte Rosa", "Inizio dal rifugio Margherita e continuare sul passo dei Salati", 2,"tutti","personalizzato")));
 
         PostListAdapter accpostListAdapter = new PostListAdapter(this, R.layout.list_post, listaPostAcc);
         ListView postaccountListView = findViewById(R.id.postaccountListView);
@@ -75,7 +75,7 @@ public class AccountActivity extends AppCompatActivity {
                 UtentePost p = accpostListAdapter.getItem(i);
                 Intent postIntent=new Intent(AccountActivity.this, PostActivity.class);
 
-                postIntent.putExtra("utente", "utenteX");
+                postIntent.putExtra("utente", "mariorossi");
                 postIntent.putExtra("nome percorso", p.getNomePercorso());
                 postIntent.putExtra("descrizione", p.getDescrizione());
                 postIntent.putExtra("tipologia", p.getTipologia());

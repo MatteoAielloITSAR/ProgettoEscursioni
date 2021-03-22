@@ -72,8 +72,8 @@ public class PostIscrizioniActivity extends AppCompatActivity {
         });
 
         ArrayList<UtentePost> list=new ArrayList<>();
-        list.add(new UtentePost(new Utente("utente1"),new Post("pippo", "asd", 2,"ss","a")));
-        list.add(new UtentePost(new Utente("utente2"),new Post("pluto", "asad", 4,"aa","s")));
+        list.add(new UtentePost(new Utente("mariorossi"),new Post("Baita della volpe, Monte Bianco", "Partenza da Baita Trecime, seguire il percorso 503 e 512", 1,"tutti","personalizzato")));
+        list.add(new UtentePost(new Utente("mariorossi"),new Post("Cima Monte Rosa", "Inizio dal rifugio Margherita e continuare sul passo dei Salati", 2,"tutti","personalizzato")));
 
         PostListAdapter postListAdapter=new PostListAdapter(this,R.layout.list_post,list);
         ListView postListView = findViewById(R.id.percorsiListView);
