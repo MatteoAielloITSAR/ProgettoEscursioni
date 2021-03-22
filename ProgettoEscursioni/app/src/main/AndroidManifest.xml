@@ -12,9 +12,7 @@
         android:theme="@style/Theme.ProgettoEscursioni">
         <activity android:name=".SceltaPercorso"></activity>
         <activity android:name=".AccountVetrina"/>
-        <activity android:name=".IscrizioniActivity">
-
-        </activity>
+        <activity android:name=".IscrizioniActivity"/>
         <activity android:name=".PostIscrizioniActivity" />
         <activity android:name=".CreazionePostActivity" />
         <activity android:name=".PostActivity" />
@@ -28,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".ConfermaActivity" />
         <activity android:name=".NuovologinActivity" />
         <activity android:name=".RecuperopasswordActivity" />

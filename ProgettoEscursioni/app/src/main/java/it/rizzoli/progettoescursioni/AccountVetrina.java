@@ -30,6 +30,11 @@ public class AccountVetrina extends AppCompatActivity {
         PostListAdapter postListAdapter = new PostListAdapter(this, R.layout.list_post, listaPost);
         ListView postvetrinaListView = findViewById(R.id.postvetrinaListView);
         postvetrinaListView.setAdapter(postListAdapter);
+        Intent i = getIntent();
+        Bundle bundle = i.getExtras();
+        int idUtente = bundle.getInt("UTENTE");
+
+
 
         postvetrinaListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
