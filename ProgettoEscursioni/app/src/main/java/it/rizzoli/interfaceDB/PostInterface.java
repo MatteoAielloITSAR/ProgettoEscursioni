@@ -19,13 +19,13 @@ public interface PostInterface {
     Call<Utente> byId(@Path("id") Integer id);
 
     @POST("/post")
-    Call<Post> inserisci(@Body Utente utente);
+    Call<Post> inserisci(@Body Post post);
 
     @POST("/post/{id}")
     Call<Utente> inserisciPost(@Body Post post, @Path("id") Integer id);
 
     @PUT("/post/{id}")
-    Call<Utente> aggiorna(@Body Utente utente, @Path("id") Integer id);
+    Call<Utente> aggiorna(@Body Post post, @Path("id") Integer id);
 
 
 }
