@@ -4,3 +4,4 @@ progetto-escursioni-angular/
 .metadata/
 .gitignore.rej
 connessione-db/
+angular/src/app/model/ps.ts
